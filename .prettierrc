@@ -1,0 +1,21 @@
+{
+  "semi": true,
+  "singleQuote": false,
+  "trailingComma": "all",
+  "printWidth": 90,
+  "tabWidth": 2,
+  "plugins": [
+    "prettier-plugin-jinja-template",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-organize-attributes",
+    "prettier-plugin-css-order"
+  ],
+  "overrides": [
+    {
+      "files": ["./_includes/*.njk", "./_includes/layouts/*.njk"],
+      "options": {
+        "parser": "jinja-template"
+      }
+    }
+  ]
+}

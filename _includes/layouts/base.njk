@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ description or metadata.description }}" />
+    <link
+      rel="alternate"
+      href="feed/feed.xml"
+      type="application/atom+xml"
+      title="{{ metadata.title }}"
+    />
+    <meta name="title" content="{{ title or metadata.title }}" />
+    <meta name="description" content="{{ description or metadata.description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://geomydas.github.io/randev/" />
+    <meta property="og:title" content="{{ title or metadata.title }}" />
+    <meta property="og:description" content="{{ description or metadata.description }}" />
+    <!-- <meta property="og:image" content="https://geomydas.github.io/randev/images/meta-tags.png" /> -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://geomydas.github.io/randev/" />
+    <meta property="twitter:title" content="{{ title or metadata.title }}" />
+    <meta
+      property="twitter:description"
+      content="{{ description or metadata.description }}"
+    />
+    <!-- <meta property="twitter:image" content="https://geomydas.github.io/randev/images/meta-tags.png" /> -->
+    <!-- Meta Tags Generated with https://metatags.io -->
+    {%- css %}{% include "public/css/output.css" %}{% endcss %}
+    <!-- prettier-ignore-start -->
+		<style>{% getBundle "css" %}</style>
+		<!-- prettier-ignore-end -->
+    <title>{{ title or metadata.title }}</title>
+    {%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
+  </head>
+  <body>
+    <a href="#skipToMainContent">Skip to main content</a>
+
+    <header>
+      <a href="/">{{ metadata.title }}</a>
+
+      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+      <nav>
+        <h2>Top level navigation menu</h2>
+        <ul>
+          {%- for entry in collections.all | eleventyNavigation %}
+            <li>
+              <a
+                href="{{ entry.url }}"
+                {% if entry.url == page.url %}aria-current="page"{% endif %}
+                >{{ entry.title }}</a
+              >
+            </li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main id="skipToMainContent">
+      <heading-anchors> {{ content | safe }} </heading-anchors>
+    </main>
+
+    <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+    <!-- prettier-ignore-start -->
+		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+		<!-- prettier-ignore-end -->
+  </body>
+</html>
