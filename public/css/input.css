@@ -44,6 +44,20 @@
   );
 }
 
+@utility bg-rainbowDark {
+  background-image: linear-gradient(
+    to right in lch,
+    var(--color-red-800),
+    var(--color-orange-800),
+    var(--color-yellow-800),
+    var(--color-green-800),
+    var(--color-blue-800),
+    var(--color-sky-800),
+    var(--color-indigo-800),
+    var(--color-violet-800)
+  );
+}
+
 .prose {
   --tw-prose-body: var(--color-slate-800);
   --tw-prose-headings: var(--color-slate-900);

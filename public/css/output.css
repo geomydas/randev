@@ -1177,6 +1177,9 @@
   .table {
     display: table;
   }
+  .w-fit {
+    width: fit-content;
+  }
   .flex-auto {
     flex: auto;
   }
@@ -1249,6 +1252,12 @@
   }
   .bg-rainbow {
     background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
+  }
+  .bg-rainbowDark {
+    background-image: linear-gradient( to right in lch, var(--color-red-800), var(--color-orange-800), var(--color-yellow-800), var(--color-green-800), var(--color-blue-800), var(--color-sky-800), var(--color-indigo-800), var(--color-violet-800) );
+  }
+  .bg-clip-text {
+    background-clip: text;
   }
   .p-0 {
     padding: calc(var(--spacing) * 0);
@@ -1409,6 +1418,10 @@
   .font-inter {
     font-family: var(--font-inter);
   }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -1417,15 +1430,37 @@
     --tw-leading: var(--leading-normal);
     line-height: var(--leading-normal);
   }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-black\/10 {
+    color: color-mix(in oklab, var(--color-black) 10%, transparent);
+  }
+  .text-black\/50 {
+    color: color-mix(in oklab, var(--color-black) 50%, transparent);
+  }
+  .text-black\/75 {
+    color: color-mix(in oklab, var(--color-black) 75%, transparent);
+  }
+  .text-black\/90 {
+    color: color-mix(in oklab, var(--color-black) 90%, transparent);
   }
   .text-gray-800 {
     color: var(--color-gray-800);
   }
   .text-inherit {
     color: inherit;
+  }
+  .text-transparent {
+    color: transparent;
   }
   .text-white {
     color: var(--color-white);
