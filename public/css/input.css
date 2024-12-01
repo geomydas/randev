@@ -1,13 +1,38 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@utility test {
-  background: black;
+@theme {
+  --font-inter: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v18-latin-regular.woff2") format("woff2");
+  font-family: "Inter";
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-v18-latin-700.woff2") format("woff2");
+  font-family: "Inter";
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-v18-latin-900.woff2") format("woff2");
+  font-family: "Inter";
+  font-display: swap;
 }
 
 @utility bg-rainbow {
-  background: linear-gradient(
-    to right  in lch,
+  background-image: linear-gradient(
+    to right in lch,
     var(--color-red-400),
     var(--color-orange-400),
     var(--color-yellow-400),
