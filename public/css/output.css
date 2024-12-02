@@ -1201,6 +1201,9 @@
   .max-w-4xl {
     max-width: var(--container-4xl);
   }
+  .max-w-prose {
+    max-width: var(--container-prose);
+  }
   .flex-auto {
     flex: auto;
   }
@@ -1300,6 +1303,9 @@
   }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
+  }
+  .bg-gray-300 {
+    background-color: var(--color-gray-300);
   }
   .bg-red-400 {
     background-color: var(--color-red-400);
@@ -1552,6 +1558,9 @@
   .text-gray-800 {
     color: var(--color-gray-800);
   }
+  .text-gray-900 {
+    color: var(--color-gray-900);
+  }
   .text-inherit {
     color: inherit;
   }
@@ -1590,6 +1599,27 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .group-hover\:bg-gray-100 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-gray-100);
+      }
+    }
+  }
+  .group-hover\:bg-gray-200 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-gray-200);
+      }
+    }
+  }
+  .group-hover\:bg-gray-400 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-gray-400);
+      }
+    }
+  }
   .group-hover\:bg-rainbow {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1601,6 +1631,20 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         color: transparent;
+      }
+    }
+  }
+  .group-hover\/list\:bg-red-400 {
+    &:is(:where(.group\/list):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-red-400);
+      }
+    }
+  }
+  .group-hover\/list\:text-black\/75 {
+    &:is(:where(.group\/list):hover *) {
+      @media (hover: hover) {
+        color: color-mix(in oklab, var(--color-black) 75%, transparent);
       }
     }
   }
@@ -1680,6 +1724,11 @@
   .dark\:text-gray-100 {
     @media (prefers-color-scheme: dark) {
       color: var(--color-gray-100);
+    }
+  }
+  .dark\:text-gray-200 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-gray-200);
     }
   }
   .hover\:dark\:bg-gray-700 {
