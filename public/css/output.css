@@ -1192,6 +1192,15 @@
   .table {
     display: table;
   }
+  .w-fit {
+    width: fit-content;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-4xl {
+    max-width: var(--container-4xl);
+  }
   .flex-auto {
     flex: auto;
   }
@@ -1291,6 +1300,9 @@
   }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
+  }
+  .bg-red-400 {
+    background-color: var(--color-red-400);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -1477,6 +1489,10 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -1488,6 +1504,10 @@
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .leading-normal {
     --tw-leading: var(--leading-normal);
@@ -1513,6 +1533,10 @@
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
   }
+  .tracking-tighter {
+    --tw-tracking: var(--tracking-tighter);
+    letter-spacing: var(--tracking-tighter);
+  }
   .text-blue-500 {
     color: var(--color-blue-500);
   }
@@ -1521,6 +1545,9 @@
   }
   .text-inherit {
     color: inherit;
+  }
+  .text-transparent {
+    color: transparent;
   }
   .text-white {
     color: var(--color-white);
@@ -1602,6 +1629,11 @@
   .focus\:p-8 {
     &:focus {
       padding: calc(var(--spacing) * 8);
+    }
+  }
+  .aria-current\:bg-red-400 {
+    &[aria-current="true"] {
+      background-color: var(--color-red-400);
     }
   }
   .dark\:bg-gray-700 {
@@ -1710,6 +1742,7 @@
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-tracking: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-inset-shadow: 0 0 #0000;
@@ -1805,6 +1838,10 @@
   inherits: false;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }

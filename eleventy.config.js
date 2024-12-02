@@ -101,6 +101,14 @@ export default async function (eleventyConfig) {
     // by default we use Eleventy’s built-in `slugify` filter:
     // slugify: eleventyConfig.getFilter("slugify"),
     // selector: "h1,h2,h3,h4,h5,h6", // default
+    //
+    filter: function ({ page }) {
+      if (page.inputPath.endsWith("index.njk")) {
+        return false; // skip
+      }
+
+      return true;
+    },
   });
 
   eleventyConfig.addShortcode("currentBuildDate", () => {

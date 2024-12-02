@@ -4,7 +4,12 @@ const eleventyNavigation = {
 	order: 2
 };
 ---
-<h1>Archive</h1>
 
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+<div class="mx-auto w-full max-w-4xl p-8">
+  <h1 class="text-5xl font-black mb-12 bg-rainbow bg-clip-text text-transparent w-fit">
+    The Archive
+  </h1>
+
+  {% set postslist = collections.posts %}
+  {% include "postslist.njk" %}
+</div>
