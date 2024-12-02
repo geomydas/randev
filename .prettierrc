@@ -12,7 +12,7 @@
   ],
   "overrides": [
     {
-      "files": ["./_includes/*.njk", "./_includes/layouts/*.njk"],
+      "files": ["./_includes/*.njk", "./_includes/layouts/*.njk", "./content/*.njk"],
       "options": {
         "parser": "jinja-template"
       }

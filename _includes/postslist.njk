@@ -1,6 +1,3 @@
-{%- css %}
-  .postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }
-{% endcss %}
 <ol reversed>
   {%- for post in postslist | reverse %}
     <li>

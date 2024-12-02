@@ -16,7 +16,10 @@
     <meta property="og:url" content="https://geomydas.github.io/randev/" />
     <meta property="og:title" content="{{ title or metadata.title }}" />
     <meta property="og:description" content="{{ description or metadata.description }}" />
-    <!-- <meta property="og:image" content="https://geomydas.github.io/randev/images/meta-tags.png" /> -->
+    <meta
+      property="og:image"
+      content="https://geomydas.github.io/randev/images/meta-tags.png"
+    />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://geomydas.github.io/randev/" />
     <meta property="twitter:title" content="{{ title or metadata.title }}" />
@@ -24,8 +27,10 @@
       property="twitter:description"
       content="{{ description or metadata.description }}"
     />
-    <!-- <meta property="twitter:image" content="https://geomydas.github.io/randev/images/meta-tags.png" /> -->
-    <!-- Meta Tags Generated with https://metatags.io -->
+    <meta
+      property="twitter:image"
+      content="https://geomydas.github.io/randev/images/meta-tags.png"
+    />
     {%- css %}{% include "public/css/output.css" %}{% endcss %}
     <!-- prettier-ignore-start -->
 		<style>{% getBundle "css" %}</style>
@@ -36,15 +41,36 @@
   <body
     class="font-inter font-normal leading-normal text-base  bg-gray-100 dark:bg-gray-800 dark:text-gray-100 text-gray-800"
   >
-    <a href="#skipToMainContent">Skip to main content</a>
+    <a
+      class="dark:bg-gray-900 text-center focus:p-8 font-black text-2xl focus:block sr-only focus:not-sr-only"
+      href="#skipToMainContent"
+      >Skip to main content</a
+    >
 
-    <header>
-      <a href="/">{{ metadata.title }}</a>
-
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+    <header class="flex justify-between items-center bg-gray-200 p-8 dark:bg-gray-700">
+      <a
+        class="flex items-center gap-2"
+        href="/"
+        aria-current="page"
+        aria-label="randev - Home"
+        ><svg
+          class="dark:fill-gray-400 fill-gray-800"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <span class="font-extrabold text-lg text-inherit">randev</span></a
+      >
       <nav>
-          <h2>Top level navigation menu</h2>
-        <ul>
+        <ul class="flex items-center gap-4 text-lg">
           {%- for entry in collections.all | eleventyNavigation %}
             <li>
               <a
