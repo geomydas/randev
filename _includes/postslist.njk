@@ -19,7 +19,16 @@
         >
       </p>
       <p class="text-lg leading-relaxed mb-8">{{ post.data.description }}</p>
-
+      <ul class="flex flex-wrap gap-4">
+        {% for tag in collections | getKeys | filterTagList %}
+          {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+          <li
+            class="px-4 py-2 rounded-md dark:bg-gray-800 text-sm text-gray-200 hover:bg-rainbow group/list font-bold "
+          >
+            <a href="{{ tagUrl }}">{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
     </li>
   {%- endfor %}
 </ol>
