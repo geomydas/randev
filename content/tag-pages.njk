@@ -17,9 +17,17 @@ const eleventyComputed = {
 	}
 };
 ---
-<h1>Tagged “{{ tag }}”</h1>
 
-{% set postslist = collections[ tag ] %}
-{% include "postslist.njk" %}
+<div class="mx-auto w-full p-4 max-w-4xl">
+  <h1
+    class="text-5xl font-black mb-12 tracking-tighter bg-clip-text text-transparent bg-rainbow w-fit    "
+  >
+    Tagged
+    <em>"{{ tag }}"</em>
+  </h1>
 
-<p>See <a href="tags.njk">all tags</a>.</p>
+  {% set postslist = collections[ tag ] %}
+  {% include "postslist.njk" %}
+
+  <p>See <a href="tags.njk">all tags</a>.</p>
+</div>
