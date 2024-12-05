@@ -49,7 +49,7 @@
 
     <header class="flex justify-between items-center bg-gray-200 p-8 dark:bg-gray-700">
       <a
-        class="flex items-center gap-2"
+        class="flex items-center group gap-2"
         href="/"
         aria-current="page"
         aria-label="randev - Home"
@@ -62,20 +62,36 @@
           aria-hidden="true"
         >
           <path
+            class="group-hover:fill-[url(#rainbow)]"
             fill-rule="evenodd"
             d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433z"
             clip-rule="evenodd"
           ></path>
+          <defs>
+            <linearGradient id="rainbow">
+              <stop offset="0%" stop-color="var(--color-red-400)" />
+              <stop offset="12.5%" stop-color="var(--color-orange-400)" />
+              <stop offset="25%" stop-color="var(--color-yellow-400)" />
+              <stop offset="37.5%" stop-color="var(--color-green-400)" />
+              <stop offset="50%" stop-color="var(--color-blue-400)" />
+              <stop offset="62.5%" stop-color="var(--color-sky-400)" />
+              <stop offset="75%" stop-color="var(--color-indigo-400)" />
+              <stop offset="100%" stop-color="var(--color-violet-400)" />
+            </linearGradient>
+          </defs>
         </svg>
-        <span class="font-extrabold text-lg text-inherit">randev</span></a
+        <span
+          class="font-extrabold text-lg bg-clip-text group-hover:bg-rainbow group-hover:text-transparent text-inherit"
+          >randev</span
+        ></a
       >
       <nav>
         <ul class="flex items-center gap-4 text-lg">
           {%- for entry in collections.all | eleventyNavigation %}
             <li>
               <a
+                class="bg-clip-text hover:bg-rainbow hover:text-transparent font-bold"
                 href="{{ entry.url }}"
-                class="aria-current:bg-red-400"
                 {% if entry.url == page.url %}aria-current="page"{% endif %}
                 >{{ entry.title }}</a
               >

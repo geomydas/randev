@@ -20,13 +20,15 @@
       </p>
       <p class="text-lg leading-relaxed mb-8">{{ post.data.description }}</p>
       <ul class="flex flex-wrap gap-4  h-fit">
-        {% for tag in collections | getKeys | filterTagList %}
+        {% for tag in post.data.tags %}
           {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-          <li
-            class="group/tags hover:bg-rainbow bg-gray-300 px-4 py-2 font-bold rounded-md group-hover/card:bg-gray-200"
-          >
-            <a href="{{ tagUrl }}" class="   ">{{ tag }}</a>
-          </li>
+          {%- if tag !== "posts" %}
+            <li
+              class="group/tags hover:bg-rainbow dark:bg-gray-800 group-hover/card:dark:bg-gray-600 bg-gray-300 px-4 py-2 font-bold rounded-md group-hover/card:bg-gray-200"
+            >
+              <a class="" href="/tags/{{ tag | slugify }}"> {{ tag }}</a>
+            </li>
+          {%- endif %}
         {% endfor %}
       </ul>
     </li>

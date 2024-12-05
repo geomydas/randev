@@ -103,7 +103,11 @@ export default async function (eleventyConfig) {
     // selector: "h1,h2,h3,h4,h5,h6", // default
     //
     filter: function ({ page }) {
-      if (page.inputPath.endsWith("index.njk") || page.inputPath.endsWith("blog.njk") || page.inputPath.endsWith("tag-pages.njk")) {
+      if (
+        page.inputPath.endsWith("index.njk") ||
+        page.inputPath.endsWith("blog.njk") ||
+        page.inputPath.endsWith("tag-pages.njk")
+      ) {
         return false; // skip
       }
 
