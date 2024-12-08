@@ -1246,6 +1246,9 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .animate-bgRotate {
+    animation: bgRotate 1s linear infinite;
+  }
   .cursor-help {
     cursor: help;
   }
@@ -1653,9 +1656,6 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
-  .animate-bgRotate {
-    animat: animat;
-  }
   .prose {
     --tw-prose-body: var(--color-gray-800);
     --tw-prose-headings: var(--color-gray-800);
@@ -1722,6 +1722,13 @@
     &:is(:where(.group\/card):hover *) {
       @media (hover: hover) {
         background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
+      }
+    }
+  }
+  .group-hover\/card\:bg-rainbowConic {
+    &:is(:where(.group\/card):hover *) {
+      @media (hover: hover) {
+        background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
       }
     }
   }
@@ -1807,6 +1814,12 @@
       scale: var(--tw-scale-x) var(--tw-scale-y);
     }
   }
+  .after\:animate-bgRotate {
+    &::after {
+      content: var(--tw-content);
+      animation: bgRotate 1s linear infinite;
+    }
+  }
   .after\:rounded-md {
     &::after {
       content: var(--tw-content);
@@ -1833,12 +1846,6 @@
       transition-duration: var(--tw-duration, var(--default-transition-duration));
     }
   }
-  .after\:animate-bgRotate {
-    &::after {
-      content: var(--tw-content);
-      animat: animat;
-    }
-  }
   .hover\:bg-gray-50 {
     &:hover {
       @media (hover: hover) {
@@ -1850,6 +1857,13 @@
     &:hover {
       @media (hover: hover) {
         background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
+      }
+    }
+  }
+  .hover\:bg-rainbowConic {
+    &:hover {
+      @media (hover: hover) {
+        background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
       }
     }
   }
@@ -1991,6 +2005,37 @@
     }
   }
 }
+@property --tw-rotate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes bgRotate {
+  to {
+    --tw-rotate: 360deg;
+  }
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/inter-v18-latin-regular.woff2") format("woff2");
+  font-family: "Inter";
+  font-display: swap;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/inter-v18-latin-700.woff2") format("woff2");
+  font-family: "Inter";
+  font-display: swap;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/inter-v18-latin-900.woff2") format("woff2");
+  font-family: "Inter";
+  font-display: swap;
+}
 .token.inserted {
   background-color: color-mix(in oklab, var(--color-green-400) 25%, transparent);
 }
@@ -2106,37 +2151,6 @@
 }
 .rainbow-braces .token.token.punctuation.brace-level-4, .rainbow-braces .token.token.punctuation.brace-level-8, .rainbow-braces .token.token.punctuation.brace-level-12 {
   color: var(--color-fuchsia-400);
-}
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/inter-v18-latin-regular.woff2") format("woff2");
-  font-family: "Inter";
-  font-display: swap;
-}
-@font-face {
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/inter-v18-latin-700.woff2") format("woff2");
-  font-family: "Inter";
-  font-display: swap;
-}
-@font-face {
-  font-style: normal;
-  font-weight: 900;
-  src: url("/fonts/inter-v18-latin-900.woff2") format("woff2");
-  font-family: "Inter";
-  font-display: swap;
-}
-@property --tw-rotate {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-@keyframes bgRotate {
-  to {
-    --tw-rotate: 360deg;
-  }
 }
 @supports (-moz-orient: inline) {
   @layer base {
