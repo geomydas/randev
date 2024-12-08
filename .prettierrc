@@ -6,9 +6,9 @@
   "tabWidth": 2,
   "plugins": [
     "prettier-plugin-jinja-template",
-    "prettier-plugin-tailwindcss",
     "prettier-plugin-organize-attributes",
-    "prettier-plugin-css-order"
+    "prettier-plugin-css-order",
+    "prettier-plugin-tailwindcss"
   ],
   "overrides": [
     {

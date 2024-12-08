@@ -1234,6 +1234,9 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .cursor-help {
+    cursor: help;
+  }
   .resize {
     resize: both;
   }
@@ -1320,6 +1323,18 @@
   }
   .bg-gray-300 {
     background-color: var(--color-gray-300);
+  }
+  .bg-green-400 {
+    background-color: var(--color-green-400);
+  }
+  .bg-green-400\/25 {
+    background-color: color-mix(in oklab, var(--color-green-400) 25%, transparent);
+  }
+  .bg-red-400 {
+    background-color: var(--color-red-400);
+  }
+  .bg-red-400\/25 {
+    background-color: color-mix(in oklab, var(--color-red-400) 25%, transparent);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -1550,14 +1565,47 @@
     --tw-tracking: var(--tracking-tighter);
     letter-spacing: var(--tracking-tighter);
   }
+  .text-blue-400 {
+    color: var(--color-blue-400);
+  }
   .text-blue-500 {
     color: var(--color-blue-500);
+  }
+  .text-cyan-400 {
+    color: var(--color-cyan-400);
+  }
+  .text-fuchsia-400 {
+    color: var(--color-fuchsia-400);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
+  .text-gray-600 {
+    color: var(--color-gray-600);
   }
   .text-gray-800 {
     color: var(--color-gray-800);
   }
   .text-inherit {
     color: inherit;
+  }
+  .text-inherit\! {
+    color: inherit !important;
+  }
+  .text-lime-400 {
+    color: var(--color-lime-400);
+  }
+  .text-orange-400 {
+    color: var(--color-orange-400);
+  }
+  .text-orange-600 {
+    color: var(--color-orange-600);
+  }
+  .text-red-400 {
+    color: var(--color-red-400);
   }
   .text-transparent {
     color: transparent;
@@ -1573,6 +1621,9 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .opacity-80 {
+    opacity: 80%;
   }
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -1855,6 +1906,122 @@
       }
     }
   }
+}
+.token.inserted {
+  background-color: color-mix(in oklab, var(--color-green-400) 25%, transparent);
+}
+.token.deleted {
+  background-color: color-mix(in oklab, var(--color-red-400) 25%, transparent);
+}
+.token.inserted *, .token.deleted * {
+  color: inherit !important;
+}
+.token.comment, .token.prolog, .token.cdata {
+  color: var(--color-gray-600);
+}
+.token.doctype, .token.punctuation, .token.entity {
+  color: var(--color-gray-400);
+}
+.token.attr-name, .token.class-name, .token.boolean, .token.constant, .token.number, .token.atrule {
+  color: var(--color-orange-400);
+}
+.token.keyword {
+  color: var(--color-fuchsia-400);
+}
+.token.property, .token.tag, .token.symbol, .token.deleted, .token.important {
+  color: var(--color-red-400);
+}
+.token.selector, .token.string, .token.char, .token.builtin, .token.inserted, .token.regex, .token.attr-value, .token.attr-value > .token.punctuation {
+  color: var(--color-lime-400);
+}
+.token.variable, .token.operator, .token.function {
+  color: var(--color-blue-400);
+}
+.token.url {
+  color: var(--color-cyan-400);
+}
+.token.attr-value > .token.punctuation.attr-equals, .token.special-attr > .token.attr-value > .token.value.css {
+  color: var(--color-gray-400);
+}
+.language-css .token.selector {
+  color: var(--color-red-400);
+}
+.language-css .token.property {
+  color: var(--color-gray-400);
+}
+.language-css .token.function, .language-css .token.url > .token.function {
+  color: var(--color-cyan-400);
+}
+.language-css .token.url > .token.string.url {
+  color: var(--color-lime-400);
+}
+.language-css .token.important, .language-css .token.atrule .token.rule {
+  color: var(--color-fuchsia-400);
+}
+.language-javascript .token.operator {
+  color: var(--color-fuchsia-400);
+}
+.language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
+  color: var(--color-orange-600);
+}
+.language-json .token.operator {
+  color: var(--color-gray-400);
+}
+.language-json .token.null.keyword {
+  color: var(--color-orange-400);
+}
+.language-markdown .token.url, .language-markdown .token.url > .token.operator, .language-markdown .token.url-reference.url > .token.string {
+  color: var(--color-gray-400);
+}
+.language-markdown .token.url > .token.content {
+  color: var(--color-blue-400);
+}
+.language-markdown .token.url > .token.url, .language-markdown .token.url-reference.url {
+  color: var(--color-cyan-400);
+}
+.language-markdown .token.blockquote.punctuation, .language-markdown .token.hr.punctuation {
+  color: var(--color-gray-600);
+  font-style: italic;
+}
+.language-markdown .token.code-snippet {
+  color: var(--color-lime-400);
+}
+.language-markdown .token.bold .token.content {
+  color: var(--color-orange-400);
+}
+.language-markdown .token.italic .token.content {
+  color: var(--color-fuchsia-400);
+}
+.language-markdown .token.strike .token.content, .language-markdown .token.strike .token.punctuation, .language-markdown .token.list.punctuation, .language-markdown .token.title.important > .token.punctuation {
+  color: var(--color-red-400);
+}
+.token.bold {
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+.token.comment, .token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+.token.namespace {
+  opacity: 80%;
+}
+.line-numbers .line-numbers-rows > span:before, .command-line .command-line-prompt > span:before {
+  color: var(--color-gray-500);
+}
+.rainbow-braces .token.token.punctuation.brace-level-1, .rainbow-braces .token.token.punctuation.brace-level-5, .rainbow-braces .token.token.punctuation.brace-level-9 {
+  color: var(--color-red-400);
+}
+.rainbow-braces .token.token.punctuation.brace-level-2, .rainbow-braces .token.token.punctuation.brace-level-6, .rainbow-braces .token.token.punctuation.brace-level-10 {
+  color: var(--color-lime-400);
+}
+.rainbow-braces .token.token.punctuation.brace-level-3, .rainbow-braces .token.token.punctuation.brace-level-7, .rainbow-braces .token.token.punctuation.brace-level-11 {
+  color: var(--color-blue-400);
+}
+.rainbow-braces .token.token.punctuation.brace-level-4, .rainbow-braces .token.token.punctuation.brace-level-8, .rainbow-braces .token.token.punctuation.brace-level-12 {
+  color: var(--color-fuchsia-400);
 }
 @font-face {
   font-style: normal;

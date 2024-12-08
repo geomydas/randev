@@ -5,7 +5,7 @@ const eleventyNavigation = {
 };
 ---
 
-<div class="prose max-w-prose p-8 mx-auto">
+<div class="prose dark:prose-invert p-8 mx-auto">
 
 # About
 
