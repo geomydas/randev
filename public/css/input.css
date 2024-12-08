@@ -45,18 +45,34 @@
   );
 }
 
-@utility bg-rainbowDark {
-  background-image: linear-gradient(
-    to right in lch,
-    var(--color-red-800),
-    var(--color-orange-800),
-    var(--color-yellow-800),
-    var(--color-green-800),
-    var(--color-blue-800),
-    var(--color-sky-800),
-    var(--color-indigo-800),
-    var(--color-violet-800)
+@utility bg-rainbowConic {
+  background-image: conic-gradient(
+    from var(--tw-rotate) in lch,
+    var(--color-red-400),
+    var(--color-orange-400),
+    var(--color-yellow-400),
+    var(--color-green-400),
+    var(--color-blue-400),
+    var(--color-sky-400),
+    var(--color-indigo-400),
+    var(--color-violet-400),
+    var(--color-red-400)
   );
+}
+@property --tw-rotate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@utility animate-bgRotate {
+  animat
+}
+
+@keyframes bgRotate {
+  to {
+    --tw-rotate: 360deg;
+  }
 }
 
 @utility prose {

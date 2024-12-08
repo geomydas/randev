@@ -5,8 +5,10 @@ layout: layouts/base.njk
 <article class="prose dark:prose-invert mx-auto w-full max-w-prose p-8">
   <h1>{{ title }}</h1>
 
-  <ul class="not-prose flex flex-wrap gap-4 ">
-    <li class="hover:bg-rainbow rounded-md bg-gray-300 text-sm px-4 py-2 font-bold dark:bg-gray-900">
+  <ul class="not-prose flex flex-wrap gap-4">
+    <li
+      class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 text-sm font-bold dark:bg-gray-900"
+    >
       <time datetime="{{ page.date | htmlDateString }}"
         >{{ page.date | readableDate }}</time
       >
@@ -27,15 +29,18 @@ layout: layouts/base.njk
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
     {%- set nextPost = collections.posts | getNextCollectionItem %}
     {%- if nextPost or previousPost %}
-      <ul>
+      <ul class="not-prose grid grid-cols-2 grid-rows-1  gap-8 mt-24">
         {%- if previousPost %}
-          <li>
-            ← Previous
-            <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+          <li class="  [grid-column-start:1]">
+            <span class="block font-bold">Previous:</span>
+            <a href="{{ previousPost.url }}" class="hover:underline">{{ previousPost.data.title }}</a>
           </li>
         {% endif %}
         {%- if nextPost %}
-          <li>Next →<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>
+          <li class="text-right [grid-column-start:2] ">
+            <span class="block font-bold ">Next: </span>
+            <a href="{{ nextPost.url }}" class="hover:underline">{{ nextPost.data.title }}</a>
+          </li>
         {% endif %}
       </ul>
     {%- endif %}

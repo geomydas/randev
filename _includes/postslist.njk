@@ -1,30 +1,30 @@
 <ol
-  class="grid gap-8 mb-12 grid-rows-[repeat(,auto)] grid-cols-[repeat(auto-fit,minmax(min(100%,theme(spacing.80)),1fr))]"
+  class="mb-12 grid grid-cols-[repeat(auto-fit,minmax(min(100%,theme(spacing.80)),1fr))] grid-rows-[repeat(,auto)] gap-8"
   reversed
 >
   {%- for post in postslist | reverse %}
     <li
-      class="bg-gray-200 group/card p-6 shadow-md dark:bg-gray-900 hover:dark:bg-gray-700 transition hover:bg-gray-300 rounded-md grid grid-rows-subgrid row-span-4 gap-0"
+      class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md after:absolute after:inset-0 after:-z-10 after:hidden after:h-[calc(100%+1rem)] after:w-[calc(100%+1rem)] after:-translate-2 after:rounded-md hover:bg-gray-50 hover:after:block dark:bg-gray-900 hover:dark:bg-gray-700"
     >
-      <h3 class="text-4xl font-black mb-6">
+      <h2 class="mb-6 text-4xl font-black">
         <a
-          class="bg-clip-text group-hover/card:text-transparent group-hover/card:bg-rainbow"
+          class="group-hover/card:bg-rainbow bg-clip-text group-hover/card:text-transparent"
           href="{{ post.url }}"
           >{{ post.data.title }}</a
         >
-      </h3>
-      <p class="text-sm mb-4">
+      </h2>
+      <p class="mb-4 text-sm">
         <time datetime="{{ post.date | htmlDateString }}"
           >{{ post.date | readableDate("LLLL yyyy") }}</time
         >
       </p>
-      <p class="text-lg leading-relaxed mb-8">{{ post.data.description }}</p>
-      <ul class="flex flex-wrap gap-4  h-fit">
+      <p class="mb-8 text-lg leading-relaxed">{{ post.data.description }}</p>
+      <ul class="flex h-fit flex-wrap gap-4">
         {% for tag in post.data.tags %}
           {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
           {%- if tag !== "posts" %}
             <li
-              class="  hover:bg-rainbow dark:bg-gray-800 group-hover/card:dark:bg-gray-600 bg-gray-300 px-4 py-2 font-bold rounded-md group-hover/card:bg-gray-200"
+              class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 font-bold group-hover/card:bg-gray-200 dark:bg-gray-800 group-hover/card:dark:bg-gray-600"
             >
               <a class="" href="/tags/{{ tag | slugify }}"> {{ tag }}</a>
             </li>

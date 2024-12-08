@@ -564,6 +564,12 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .\[grid-column-start\:1\] {
+    grid-column-start: 1;
+  }
+  .\[grid-column-start\:2\] {
+    grid-column-start: 2;
+  }
   .row-span-4 {
     grid-row: span 4 / span 4;
   }
@@ -1096,6 +1102,9 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
+  .mt-24 {
+    margin-top: calc(var(--spacing) * 24);
+  }
   .mr-0 {
     margin-right: calc(var(--spacing) * 0);
   }
@@ -1243,8 +1252,14 @@
   .resize {
     resize: both;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .grid-cols-\[repeat\(auto-fit\,minmax\(min\(100\%\,theme\(spacing\.80\)\)\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(min(100%, 20rem),1fr));
+  }
+  .grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
   }
   .grid-rows-\[repeat\(\,auto\)\] {
     grid-template-rows: repeat(,auto);
@@ -1340,8 +1355,8 @@
   .bg-rainbow {
     background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
   }
-  .bg-rainbowDark {
-    background-image: linear-gradient( to right in lch, var(--color-red-800), var(--color-orange-800), var(--color-yellow-800), var(--color-green-800), var(--color-blue-800), var(--color-sky-800), var(--color-indigo-800), var(--color-violet-800) );
+  .bg-rainbowConic {
+    background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
   }
   .bg-clip-text {
     background-clip: text;
@@ -1638,10 +1653,8 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
-  .transition {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  .animate-bgRotate {
+    animat: animat;
   }
   .prose {
     --tw-prose-body: var(--color-gray-800);
@@ -1725,6 +1738,12 @@
       position: absolute;
     }
   }
+  .after\:inset-0 {
+    &::after {
+      content: var(--tw-content);
+      inset: calc(var(--spacing) * 0);
+    }
+  }
   .after\:-bottom-2 {
     &::after {
       content: var(--tw-content);
@@ -1737,16 +1756,48 @@
       left: calc(var(--spacing) * 0);
     }
   }
+  .after\:-z-10 {
+    &::after {
+      content: var(--tw-content);
+      z-index: calc(10 * -1);
+    }
+  }
+  .after\:hidden {
+    &::after {
+      content: var(--tw-content);
+      display: none;
+    }
+  }
   .after\:h-1 {
     &::after {
       content: var(--tw-content);
       height: calc(var(--spacing) * 1);
     }
   }
+  .after\:h-\[calc\(100\%\+1rem\)\] {
+    &::after {
+      content: var(--tw-content);
+      height: calc(100% + 1rem);
+    }
+  }
+  .after\:w-\[calc\(100\%\+1rem\)\] {
+    &::after {
+      content: var(--tw-content);
+      width: calc(100% + 1rem);
+    }
+  }
   .after\:w-full {
     &::after {
       content: var(--tw-content);
       width: 100%;
+    }
+  }
+  .after\:-translate-2 {
+    &::after {
+      content: var(--tw-content);
+      --tw-translate-x: calc(var(--spacing) * -2);
+      --tw-translate-y: calc(var(--spacing) * -2);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .after\:scale-x-0 {
@@ -1756,10 +1807,22 @@
       scale: var(--tw-scale-x) var(--tw-scale-y);
     }
   }
+  .after\:rounded-md {
+    &::after {
+      content: var(--tw-content);
+      border-radius: var(--radius-md);
+    }
+  }
   .after\:bg-blue-500 {
     &::after {
       content: var(--tw-content);
       background-color: var(--color-blue-500);
+    }
+  }
+  .after\:bg-rainbowConic {
+    &::after {
+      content: var(--tw-content);
+      background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
     }
   }
   .after\:transition {
@@ -1770,10 +1833,16 @@
       transition-duration: var(--tw-duration, var(--default-transition-duration));
     }
   }
-  .hover\:bg-gray-300 {
+  .after\:animate-bgRotate {
+    &::after {
+      content: var(--tw-content);
+      animat: animat;
+    }
+  }
+  .hover\:bg-gray-50 {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-gray-300);
+        background-color: var(--color-gray-50);
       }
     }
   }
@@ -1788,6 +1857,23 @@
     &:hover {
       @media (hover: hover) {
         color: transparent;
+      }
+    }
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
+      }
+    }
+  }
+  .hover\:after\:block {
+    &:hover {
+      @media (hover: hover) {
+        &::after {
+          content: var(--tw-content);
+          display: block;
+        }
       }
     }
   }
@@ -2042,6 +2128,16 @@
   font-family: "Inter";
   font-display: swap;
 }
+@property --tw-rotate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes bgRotate {
+  to {
+    --tw-rotate: 360deg;
+  }
+}
 @supports (-moz-orient: inline) {
   @layer base {
     *, ::before, ::after, ::backdrop {
@@ -2086,9 +2182,13 @@
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
       --tw-content: "";
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
+      --tw-rotate: 0deg;
     }
   }
 }
@@ -2296,6 +2396,21 @@
   syntax: "*";
   initial-value: "";
   inherits: false;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-scale-x {
   syntax: "*";
