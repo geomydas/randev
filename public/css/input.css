@@ -6,6 +6,7 @@
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -58,7 +59,7 @@
   );
 }
 
-.prose {
+@utility prose {
   --tw-prose-body: var(--color-gray-800);
   --tw-prose-headings: var(--color-gray-800);
   --tw-prose-lead: var(--color-gray-800);
@@ -88,7 +89,7 @@
   --tw-prose-invert-captions: var(--color-gray-100);
   --tw-prose-invert-code: var(--color-gray-100);
   --tw-prose-invert-pre-code: var(--color-gray-100);
-  --tw-prose-invert-pre-bg: var(--color-gray-800);
+  --tw-prose-invert-pre-bg: var(--color-gray-900);
   --tw-prose-invert-th-borders: var(--color-gray-800);
   --tw-prose-invert-td-borders: var(--color-gray-800);
 }
