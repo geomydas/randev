@@ -2,20 +2,21 @@
 layout: layouts/base.njk
 ---
 
-<article class="mx-auto prose dark:prose-invert  w-full max-w-prose p-8">
+<article class="prose dark:prose-invert mx-auto w-full max-w-prose p-8">
   <h1>{{ title }}</h1>
 
-  <ul class="flex flex-wrap  not-prose divide-x-2 ">
-    <li>
+  <ul class="not-prose flex flex-wrap gap-4 ">
+    <li class="hover:bg-rainbow rounded-md bg-gray-300 text-sm px-4 py-2 font-bold dark:bg-gray-800">
       <time datetime="{{ page.date | htmlDateString }}"
         >{{ page.date | readableDate }}</time
       >
     </li>
     {%- for tag in tags | filterTagList %}
       {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-      <li class="pl-2">
-        <a class="post-tag" href="{{ tagUrl }}">{{ tag }}</a
-        >{%- if not loop.last %},{% endif %}
+      <li
+        class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 text-sm font-bold dark:bg-gray-800"
+      >
+        <a href="{{ tagUrl }}">{{ tag }}</a>{%- if not loop.last %}{% endif %}
       </li>
     {%- endfor %}
   </ul>
