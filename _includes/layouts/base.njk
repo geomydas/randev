@@ -48,7 +48,7 @@
     >
 
     <header
-      class="flex flex-row items-center justify-between gap-8 bg-gray-200 p-8 max-md:flex-col dark:bg-gray-700"
+      class="flex flex-col items-center justify-center gap-8 bg-gray-200 p-8 dark:bg-gray-700"
     >
       <a
         class="group flex items-center gap-2"
@@ -88,7 +88,7 @@
         ></a
       >
       <nav>
-        <ul class="flex items-center max-md:text-center max-md:justify-center flex-wrap gap-4 text-lg">
+        <ul class="flex flex-wrap items-center   max-w-lg justify-center gap-4 text-center text-lg">
           {%- for entry in collections.all | eleventyNavigation %}
             <li>
               <a
