@@ -5,7 +5,7 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/randev/feed/feed.xml" rel="self" />
   <link href="https://example.com/randev/" />
-  <updated>2024-12-10T12:34:15Z</updated>
+  <updated>2024-12-10T13:58:44Z</updated>
   <id>https://example.com/randev/</id>
   <author>
     <name>Your Name</name>
@@ -13,7 +13,7 @@
   <entry>
     <title>Using a CSS reset</title>
     <link href="https://example.com/randev/blog/1-SettingFixedWidthsAndHeights/" />
-    <updated>2024-12-10T12:34:15Z</updated>
+    <updated>2024-12-10T13:58:44Z</updated>
     <id>https://example.com/randev/blog/1-SettingFixedWidthsAndHeights/</id>
     <content type="html">&lt;h2 id=&quot;whats-a-reset&quot;&gt;What&#39;s a reset?&lt;/h2&gt;
 &lt;p&gt;A CSS reset is a set of rules that you can add in your code that usually provides better defaults. You don&#39;t need to install or add dependencies, it is as simple as` copy &amp;amp; pasting it in your code. In a way, it provides a blank canvas to start your project on. &lt;a href=&quot;https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1&quot;&gt;This reset from Josh Comeau&lt;/a&gt; is an example. &lt;a href=&quot;https://piccalil.li/blog/a-more-modern-css-reset/&quot;&gt;This reset from Andy Bell is an another example&lt;/a&gt;&lt;/p&gt;
