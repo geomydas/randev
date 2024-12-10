@@ -1231,6 +1231,9 @@
   .flex-shrink-0 {
     flex-shrink: 0;
   }
+  .shrink {
+    flex-shrink: 1;
+  }
   .flex-grow {
     flex-grow: 1;
   }
@@ -1725,13 +1728,6 @@
       }
     }
   }
-  .group-hover\/card\:bg-rainbowConic {
-    &:is(:where(.group\/card):hover *) {
-      @media (hover: hover) {
-        background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
-      }
-    }
-  }
   .group-hover\/card\:text-transparent {
     &:is(:where(.group\/card):hover *) {
       @media (hover: hover) {
@@ -1857,13 +1853,6 @@
     &:hover {
       @media (hover: hover) {
         background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
-      }
-    }
-  }
-  .hover\:bg-rainbowConic {
-    &:hover {
-      @media (hover: hover) {
-        background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
       }
     }
   }

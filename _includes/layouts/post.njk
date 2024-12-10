@@ -23,23 +23,28 @@ layout: layouts/base.njk
     {%- endfor %}
   </ul>
 
+  <p>{{ description or metadata.description }}</p>
   {{ content | safe }}
 
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
     {%- set nextPost = collections.posts | getNextCollectionItem %}
     {%- if nextPost or previousPost %}
-      <ul class="not-prose grid grid-cols-2 grid-rows-1  gap-8 mt-24">
+      <ul class="not-prose mt-24 grid grid-cols-2 grid-rows-1 gap-8">
         {%- if previousPost %}
-          <li class="  [grid-column-start:1]">
+          <li class="[grid-column-start:1]">
             <span class="block font-bold">Previous:</span>
-            <a href="{{ previousPost.url }}" class="hover:underline">{{ previousPost.data.title }}</a>
+            <a class="hover:underline" href="{{ previousPost.url }}"
+              >{{ previousPost.data.title }}</a
+            >
           </li>
         {% endif %}
         {%- if nextPost %}
-          <li class="text-right [grid-column-start:2] ">
-            <span class="block font-bold ">Next: </span>
-            <a href="{{ nextPost.url }}" class="hover:underline">{{ nextPost.data.title }}</a>
+          <li class="[grid-column-start:2] text-right">
+            <span class="block font-bold">Next: </span>
+            <a class="hover:underline" href="{{ nextPost.url }}"
+              >{{ nextPost.data.title }}</a
+            >
           </li>
         {% endif %}
       </ul>
