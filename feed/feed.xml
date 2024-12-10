@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Blog Title</title>
+  <subtitle>This is a longer description about your blog.</subtitle>
+  <link href="https://example.com/randev/feed/feed.xml" rel="self" />
+  <link href="https://example.com/randev/" />
+  <updated>2024-12-10T11:00:08Z</updated>
+  <id>https://example.com/randev/</id>
+  <author>
+    <name>Your Name</name>
+  </author>
+  <entry>
+    <title>Common CSS Pitfalls &amp; How to Fix Them</title>
+    <link href="https://example.com/randev/blog/1-CommonCSSPitfalls/" />
+    <updated>2024-12-10T11:00:08Z</updated>
+    <id>https://example.com/randev/blog/1-CommonCSSPitfalls/</id>
+    <content type="html">&lt;h2 id=&quot;1-using-px-in-font-size&quot;&gt;1. Using px in font-size&lt;/h2&gt;
+&lt;p&gt;Using px in font-size is more inaccesible as it doesn&#39;t respect the user&#39;s browser setting on the font-size. What you should do is use &lt;code&gt;rem&lt;/code&gt; instead. This applies to other typography-related properties like &lt;code&gt;line-height&lt;/code&gt; and &lt;code&gt;letter-spacing&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;2-setting-fixed-widths-and-heights&quot;&gt;2. Setting fixed-widths and heights&lt;/h2&gt;
+&lt;p&gt;Let&#39;s say you have a card component that has a width of 320px or 20rem. You then set &lt;code&gt;width: 320px&lt;/code&gt; on it but that is a very big mistake as it makes it unresponsive and it also causes overflow issues. What you need to do is to set it as &lt;code&gt;max-width&lt;/code&gt;. So, your code will now look like this&lt;/p&gt;
+&lt;pre class=&quot;language-diff-css&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-diff-css&quot;&gt;&lt;span class=&quot;token deleted-sign deleted language-css&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token selector&quot;&gt;.card&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;   &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 320px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&quot;token inserted-sign inserted language-css&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token selector&quot;&gt;.card&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;   &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100%&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;   &lt;span class=&quot;token property&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 320px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Setting max-width in this case will make your card responsive and be able to shrink or grow. &lt;code&gt;width: 100%&lt;/code&gt; is used here but it depends as child elements that are centered using flex or grid width is more like &lt;code&gt;fit-content&lt;/code&gt; which your probably don&#39;t want most of the time&lt;/p&gt;
+&lt;h2 id=&quot;3-unnecessary-specificity&quot;&gt;3. Unnecessary specificity&lt;/h2&gt;
+&lt;h2 id=&quot;4-too-much-wrappers&quot;&gt;4. Too much wrappers&lt;/h2&gt;
+</content>
+  </entry>
+</feed>

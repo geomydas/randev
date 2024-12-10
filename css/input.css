@@ -1,0 +1,309 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-inter: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+@utility bg-rainbow {
+  background-image: linear-gradient(
+    to right in lch,
+    var(--color-red-400),
+    var(--color-orange-400),
+    var(--color-yellow-400),
+    var(--color-green-400),
+    var(--color-blue-400),
+    var(--color-sky-400),
+    var(--color-indigo-400),
+    var(--color-violet-400)
+  );
+}
+
+@utility bg-rainbowConic {
+  background-image: conic-gradient(
+    from var(--tw-rotate) in lch,
+    var(--color-red-400),
+    var(--color-orange-400),
+    var(--color-yellow-400),
+    var(--color-green-400),
+    var(--color-blue-400),
+    var(--color-sky-400),
+    var(--color-indigo-400),
+    var(--color-violet-400),
+    var(--color-red-400)
+  );
+}
+
+@utility animate-bgRotate {
+  animation: bgRotate 1s linear infinite;
+}
+
+@utility prose {
+  --tw-prose-body: var(--color-gray-800);
+  --tw-prose-headings: var(--color-gray-800);
+  --tw-prose-lead: var(--color-gray-800);
+  --tw-prose-links: var(--color-blue-500);
+  --tw-prose-bold: var(--color-gray-800);
+  --tw-prose-counters: var(--color-gray-800);
+  --tw-prose-bullets: var(--color-gray-800);
+  --tw-prose-hr: var(--color-gray-800);
+  --tw-prose-quotes: var(--color-gray-800);
+  --tw-prose-quote-borders: var(--color-gray-800);
+  --tw-prose-captions: var(--color-gray-800);
+  --tw-prose-code: var(--color-gray-800);
+  --tw-prose-pre-code: var(--color-gray-100);
+  --tw-prose-pre-bg: var(--color-gray-800);
+  --tw-prose-th-borders: var(--color-gray-800);
+  --tw-prose-td-borders: var(--color-gray-800);
+  --tw-prose-invert-body: var(--color-gray-100);
+  --tw-prose-invert-headings: var(--color-100);
+  --tw-prose-invert-lead: var(--color-gray-100);
+  --tw-prose-invert-links: var(--color-blue-400);
+  --tw-prose-invert-bold: var(--color-gray-100);
+  --tw-prose-invert-counters: var(--color-gray-100);
+  --tw-prose-invert-bullets: var(--color-gray-100);
+  --tw-prose-invert-hr: var(--color-gray-100);
+  --tw-prose-invert-quotes: var(--color-gray-100);
+  --tw-prose-invert-quote-borders: var(--color-gray-100);
+  --tw-prose-invert-captions: var(--color-gray-100);
+  --tw-prose-invert-code: var(--color-gray-100);
+  --tw-prose-invert-pre-code: var(--color-gray-100);
+  --tw-prose-invert-pre-bg: var(--color-gray-900);
+  --tw-prose-invert-th-borders: var(--color-gray-800);
+  --tw-prose-invert-td-borders: var(--color-gray-800);
+}
+
+@property --tw-rotate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes bgRotate {
+  to {
+    --tw-rotate: 360deg;
+  }
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/inter-v18-latin-regular.woff2") format("woff2");
+  font-family: "Inter";
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/inter-v18-latin-700.woff2") format("woff2");
+  font-family: "Inter";
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/inter-v18-latin-900.woff2") format("woff2");
+  font-family: "Inter";
+  font-display: swap;
+}
+
+.token.inserted {
+  @apply bg-green-400/25;
+}
+
+.token.deleted {
+  @apply bg-red-400/25;
+}
+
+.token.inserted *,
+.token.deleted * {
+  @apply text-inherit!;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  @apply text-gray-400;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.entity {
+  @apply text-gray-400;
+}
+
+.token.attr-name,
+.token.class-name,
+.token.boolean,
+.token.constant,
+.token.number,
+.token.atrule {
+  @apply text-orange-400;
+}
+
+.token.keyword {
+  @apply text-fuchsia-400;
+}
+
+.token.property,
+.token.tag,
+.token.symbol,
+.token.deleted,
+.token.important {
+  @apply text-red-400;
+}
+
+.token.selector,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.regex,
+.token.attr-value,
+.token.attr-value > .token.punctuation {
+  @apply text-lime-400;
+}
+
+.token.variable,
+.token.operator,
+.token.function {
+  @apply text-blue-400;
+}
+
+.token.url {
+  @apply text-cyan-400;
+}
+
+.token.attr-value > .token.punctuation.attr-equals,
+.token.special-attr > .token.attr-value > .token.value.css {
+  @apply text-gray-400;
+}
+
+.language-css .token.selector {
+  @apply text-red-400;
+}
+
+.language-css .token.property {
+  @apply text-gray-400;
+}
+
+.language-css .token.function,
+.language-css .token.url > .token.function {
+  @apply text-cyan-400;
+}
+
+.language-css .token.url > .token.string.url {
+  @apply text-lime-400;
+}
+
+.language-css .token.important,
+.language-css .token.atrule .token.rule {
+  @apply text-fuchsia-400;
+}
+
+.language-javascript .token.operator {
+  @apply text-fuchsia-400;
+}
+
+.language-javascript
+  .token.template-string
+  > .token.interpolation
+  > .token.interpolation-punctuation.punctuation {
+  @apply text-orange-600;
+}
+
+.language-json .token.operator {
+  @apply text-gray-400;
+}
+
+.language-json .token.null.keyword {
+  @apply text-orange-400;
+}
+
+.language-markdown .token.url,
+.language-markdown .token.url > .token.operator,
+.language-markdown .token.url-reference.url > .token.string {
+  @apply text-gray-400;
+}
+
+.language-markdown .token.url > .token.content {
+  @apply text-blue-400;
+}
+
+.language-markdown .token.url > .token.url,
+.language-markdown .token.url-reference.url {
+  @apply text-cyan-400;
+}
+
+.language-markdown .token.blockquote.punctuation,
+.language-markdown .token.hr.punctuation {
+  @apply text-gray-600 italic;
+}
+
+.language-markdown .token.code-snippet {
+  @apply text-lime-400;
+}
+
+.language-markdown .token.bold .token.content {
+  @apply text-orange-400;
+}
+
+.language-markdown .token.italic .token.content {
+  @apply text-fuchsia-400;
+}
+
+.language-markdown .token.strike .token.content,
+.language-markdown .token.strike .token.punctuation,
+.language-markdown .token.list.punctuation,
+.language-markdown .token.title.important > .token.punctuation {
+  @apply text-red-400;
+}
+
+.token.bold {
+  @apply font-bold;
+}
+
+.token.comment,
+.token.italic {
+  @apply italic;
+}
+
+.token.entity {
+  @apply cursor-help;
+}
+
+.token.namespace {
+  @apply opacity-80;
+}
+
+.line-numbers .line-numbers-rows > span:before,
+.command-line .command-line-prompt > span:before {
+  @apply text-gray-500;
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-1,
+.rainbow-braces .token.token.punctuation.brace-level-5,
+.rainbow-braces .token.token.punctuation.brace-level-9 {
+  @apply text-red-400;
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-2,
+.rainbow-braces .token.token.punctuation.brace-level-6,
+.rainbow-braces .token.token.punctuation.brace-level-10 {
+  @apply text-lime-400;
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-3,
+.rainbow-braces .token.token.punctuation.brace-level-7,
+.rainbow-braces .token.token.punctuation.brace-level-11 {
+  @apply text-blue-400;
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-4,
+.rainbow-braces .token.token.punctuation.brace-level-8,
+.rainbow-braces .token.token.punctuation.brace-level-12 {
+  @apply text-fuchsia-400;
+}
