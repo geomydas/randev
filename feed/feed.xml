@@ -5,32 +5,29 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/randev/feed/feed.xml" rel="self" />
   <link href="https://example.com/randev/" />
-  <updated>2024-12-10T11:00:08Z</updated>
+  <updated>2024-12-10T12:31:51Z</updated>
   <id>https://example.com/randev/</id>
   <author>
     <name>Your Name</name>
   </author>
   <entry>
-    <title>Common CSS Pitfalls &amp; How to Fix Them</title>
-    <link href="https://example.com/randev/blog/1-CommonCSSPitfalls/" />
-    <updated>2024-12-10T11:00:08Z</updated>
-    <id>https://example.com/randev/blog/1-CommonCSSPitfalls/</id>
-    <content type="html">&lt;h2 id=&quot;1-using-px-in-font-size&quot;&gt;1. Using px in font-size&lt;/h2&gt;
-&lt;p&gt;Using px in font-size is more inaccesible as it doesn&#39;t respect the user&#39;s browser setting on the font-size. What you should do is use &lt;code&gt;rem&lt;/code&gt; instead. This applies to other typography-related properties like &lt;code&gt;line-height&lt;/code&gt; and &lt;code&gt;letter-spacing&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;2-setting-fixed-widths-and-heights&quot;&gt;2. Setting fixed-widths and heights&lt;/h2&gt;
-&lt;p&gt;Let&#39;s say you have a card component that has a width of 320px or 20rem. You then set &lt;code&gt;width: 320px&lt;/code&gt; on it but that is a very big mistake as it makes it unresponsive and it also causes overflow issues. What you need to do is to set it as &lt;code&gt;max-width&lt;/code&gt;. So, your code will now look like this&lt;/p&gt;
-&lt;pre class=&quot;language-diff-css&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-diff-css&quot;&gt;&lt;span class=&quot;token deleted-sign deleted language-css&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token selector&quot;&gt;.card&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;   &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 320px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;/span&gt;
-&lt;span class=&quot;token inserted-sign inserted language-css&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token selector&quot;&gt;.card&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;   &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100%&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;   &lt;span class=&quot;token property&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 320px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Setting max-width in this case will make your card responsive and be able to shrink or grow. &lt;code&gt;width: 100%&lt;/code&gt; is used here but it depends as child elements that are centered using flex or grid width is more like &lt;code&gt;fit-content&lt;/code&gt; which your probably don&#39;t want most of the time&lt;/p&gt;
-&lt;h2 id=&quot;3-unnecessary-specificity&quot;&gt;3. Unnecessary specificity&lt;/h2&gt;
-&lt;h2 id=&quot;4-too-much-wrappers&quot;&gt;4. Too much wrappers&lt;/h2&gt;
+    <title>Using a CSS reset</title>
+    <link href="https://example.com/randev/blog/1-SettingFixedWidthsAndHeights/" />
+    <updated>2024-12-10T12:31:51Z</updated>
+    <id>https://example.com/randev/blog/1-SettingFixedWidthsAndHeights/</id>
+    <content type="html">&lt;h2 id=&quot;whats-a-reset&quot;&gt;What&#39;s a reset?&lt;/h2&gt;
+&lt;p&gt;A CSS reset is a set of rules that you can include in your code that usually provides better defaults. In a way, it provides a blank canvas to start your project on. &lt;a href=&quot;https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1&quot;&gt;This reset from Josh Comeau&lt;/a&gt; is an example. &lt;a href=&quot;https://piccalil.li/blog/a-more-modern-css-reset/&quot;&gt;This reset from Andy Bell is an another example&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;what-does-it-do&quot;&gt;What does it do?&lt;/h2&gt;
+&lt;p&gt;It provides better defaults depending on the type of project. Most resets typically share some lines of code and it doesn&#39;t matter that much depending on the type of project. What I mean by &amp;quot;type of project&amp;quot; is text-heavy sites like blogs, heavily-customized sites like landing pages, sites that use a different CSS approach like Atomic CSS.&lt;/p&gt;
+&lt;p&gt;A code example that can be normally found in most resets is this:&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;*,
+*::after,
+*::before&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;box-sizing&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; border-box&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;what-should-i-use&quot;&gt;What should I use?&lt;/h2&gt;
+&lt;p&gt;If your site is more text-heavy and similar to blogs, use &lt;a href=&quot;https://piccalil.li/blog/a-more-modern-css-reset/&quot;&gt;Andy Bell&#39;s&lt;/a&gt;. If your site is more customized and similar to landing pages, use &lt;a href=&quot;https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1&quot;&gt;Josh Comeau&#39;s&lt;/a&gt;. You might have heard of other resets like &lt;a href=&quot;https://meyerweb.com/eric/tools/css/reset/&quot;&gt;meyerweb&lt;/a&gt; or &lt;a href=&quot;https://www.npmjs.com/package/normalize.css/v/3.0.3&quot;&gt;normalize&lt;/a&gt; but they&#39;re quite old and not that much used anymore.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Don&#39;t forget that you can always customize the resets by yourself!&lt;/strong&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>

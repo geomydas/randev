@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Here is a list of the common mistakes on CSS code that beginners often make.">
+    <meta name="description" content="What&#39;s a CSS reset? What does it do? What should I use?">
     <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="randev">
-    <meta name="title" content="Common CSS Pitfalls &amp; How to Fix Them">
-    <meta name="description" content="Here is a list of the common mistakes on CSS code that beginners often make.">
+    <meta name="title" content="Using a CSS reset">
+    <meta name="description" content="What&#39;s a CSS reset? What does it do? What should I use?">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://geomydas.github.io/randev/">
-    <meta property="og:title" content="Common CSS Pitfalls &amp; How to Fix Them">
-    <meta property="og:description" content="Here is a list of the common mistakes on CSS code that beginners often make.">
+    <meta property="og:title" content="Using a CSS reset">
+    <meta property="og:description" content="What&#39;s a CSS reset? What does it do? What should I use?">
     <meta property="og:image" content="https://geomydas.github.io/randev/images/meta-tags.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://geomydas.github.io/randev/">
-    <meta property="twitter:title" content="Common CSS Pitfalls &amp; How to Fix Them">
-    <meta property="twitter:description" content="Here is a list of the common mistakes on CSS code that beginners often make.">
+    <meta property="twitter:title" content="Using a CSS reset">
+    <meta property="twitter:description" content="What&#39;s a CSS reset? What does it do? What should I use?">
     <meta property="twitter:image" content="https://geomydas.github.io/randev/images/meta-tags.png">
     <!-- prettier-ignore-start -->
 		<style>/*! tailwindcss v4.0.0-beta.6 | MIT License | https://tailwindcss.com */
@@ -1251,15 +1251,6 @@
   .flex-shrink-0 {
     flex-shrink: 0;
   }
-  .shrink {
-    flex-shrink: 1;
-  }
-  .flex-grow {
-    flex-grow: 1;
-  }
-  .grow {
-    flex-grow: 1;
-  }
   .table-fixed {
     table-layout: fixed;
   }
@@ -2451,7 +2442,7 @@
   initial-value: 1;
 }</style>
 		<!-- prettier-ignore-end -->
-    <title>Common CSS Pitfalls &amp; How to Fix Them</title>
+    <title>Using a CSS reset</title>
   </head>
   <body class="font-inter bg-gray-100 text-base leading-normal font-normal text-gray-800 dark:bg-gray-800 dark:text-gray-100">
     <a class="sr-only text-center text-2xl font-black focus:not-sr-only focus:block focus:p-8 dark:bg-gray-900" href="#skipToMainContent">Skip to main content</a>
@@ -2494,7 +2485,7 @@
     <main id="skipToMainContent">
       <heading-anchors> 
 <article class="prose dark:prose-invert mx-auto w-full max-w-prose p-8">
-  <h1 id="common-css-pitfalls-and-how-to-fix-them">Common CSS Pitfalls &amp; How to Fix Them</h1>
+  <h1 id="using-a-css-reset">Using a CSS reset</h1>
 
   <ul class="not-prose flex flex-wrap gap-4">
     <li class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 text-sm font-bold dark:bg-gray-900">
@@ -2505,29 +2496,26 @@
       </li>
   </ul>
 
-  <p>Here is a list of the common mistakes on CSS code that beginners often make.</p>
-  <h2 id="1-using-px-in-font-size">1. Using px in font-size</h2>
-<p>Using px in font-size is more inaccesible as it doesn't respect the user's browser setting on the font-size. What you should do is use <code>rem</code> instead. This applies to other typography-related properties like <code>line-height</code> and <code>letter-spacing</code></p>
-<h2 id="2-setting-fixed-widths-and-heights">2. Setting fixed-widths and heights</h2>
-<p>Let's say you have a card component that has a width of 320px or 20rem. You then set <code>width: 320px</code> on it but that is a very big mistake as it makes it unresponsive and it also causes overflow issues. What you need to do is to set it as <code>max-width</code>. So, your code will now look like this</p>
-<pre class="language-diff-css" tabindex="0"><code class="language-diff-css"><span class="token deleted-sign deleted language-css"><span class="token prefix deleted">-</span> <span class="token selector">.card</span> <span class="token punctuation">{</span>
-<span class="token prefix deleted">-</span>   <span class="token property">width</span><span class="token punctuation">:</span> 320px<span class="token punctuation">;</span>
-<span class="token prefix deleted">-</span> <span class="token punctuation">}</span>
-</span>
-<span class="token inserted-sign inserted language-css"><span class="token prefix inserted">+</span> <span class="token selector">.card</span> <span class="token punctuation">{</span>
-<span class="token prefix inserted">+</span>   <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-<span class="token prefix inserted">+</span>   <span class="token property">max-width</span><span class="token punctuation">:</span> 320px<span class="token punctuation">;</span>
-<span class="token prefix inserted">+</span> <span class="token punctuation">}</span>
-</span></code></pre>
-<p>Setting max-width in this case will make your card responsive and be able to shrink or grow. <code>width: 100%</code> is used here but it depends as child elements that are centered using flex or grid width is more like <code>fit-content</code> which your probably don't want most of the time</p>
-<h2 id="3-unnecessary-specificity">3. Unnecessary specificity</h2>
-<h2 id="4-too-much-wrappers">4. Too much wrappers</h2>
+  <p>What&#39;s a CSS reset? What does it do? What should I use?</p>
+  <h2 id="whats-a-reset">What's a reset?</h2>
+<p>A CSS reset is a set of rules that you can include in your code that usually provides better defaults. In a way, it provides a blank canvas to start your project on. <a href="https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1">This reset from Josh Comeau</a> is an example. <a href="https://piccalil.li/blog/a-more-modern-css-reset/">This reset from Andy Bell is an another example</a></p>
+<h2 id="what-does-it-do">What does it do?</h2>
+<p>It provides better defaults depending on the type of project. Most resets typically share some lines of code and it doesn't matter that much depending on the type of project. What I mean by &quot;type of project&quot; is text-heavy sites like blogs, heavily-customized sites like landing pages, sites that use a different CSS approach like Atomic CSS.</p>
+<p>A code example that can be normally found in most resets is this:</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">*,
+*::after,
+*::before</span> <span class="token punctuation">{</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="what-should-i-use">What should I use?</h2>
+<p>If your site is more text-heavy and similar to blogs, use <a href="https://piccalil.li/blog/a-more-modern-css-reset/">Andy Bell's</a>. If your site is more customized and similar to landing pages, use <a href="https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1">Josh Comeau's</a>. You might have heard of other resets like <a href="https://meyerweb.com/eric/tools/css/reset/">meyerweb</a> or <a href="https://www.npmjs.com/package/normalize.css/v/3.0.3">normalize</a> but they're quite old and not that much used anymore.</p>
+<p><strong>Don't forget that you can always customize the resets by yourself!</strong></p>
 
 </article>
  </heading-anchors>
     </main>
 
-    <!-- This page `/blog/1-CommonCSSPitfalls/` was built on 2024-12-10T11:00:24.084Z -->
+    <!-- This page `/blog/1-SettingFixedWidthsAndHeights/` was built on 2024-12-10T12:32:15.901Z -->
     <!-- prettier-ignore-start -->
 		<script type="module" src="/randev/dist/rJ3_G-2ArF.js"></script>
 		<!-- prettier-ignore-end -->
