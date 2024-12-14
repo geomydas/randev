@@ -6,7 +6,7 @@ tags: CSS
 
 ## What's a reset?
 
-A CSS reset is a set of rules that you can add in your code that usually provides better defaults. You don't need to install or add dependencies, it is as simple as` copy & pasting it in your code. In a way, it provides a blank canvas to start your project on. [This reset from Josh Comeau](https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1) is an example. [This reset from Andy Bell is an another example](https://piccalil.li/blog/a-more-modern-css-reset/)
+A CSS reset is a set of rules that you can add in your code that usually provides better defaults. You don't need to install or add dependencies, it is as simple as copy & pasting it in your code. In a way, it provides a blank canvas to start your project on. [This reset from Josh Comeau](https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1) is an example. [This reset from Andy Bell is an another example](https://piccalil.li/blog/a-more-modern-css-reset/)
 
 ## What does it do?
 
@@ -27,3 +27,9 @@ A code example that can be normally found in most resets is this:
 If your site is more text-heavy and similar to blogs, use [Andy Bell's](https://piccalil.li/blog/a-more-modern-css-reset/). If your site is more customized and similar to landing pages, use [Josh Comeau's](https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1). You might have heard of other resets like [meyerweb](https://meyerweb.com/eric/tools/css/reset/) or [normalize](https://www.npmjs.com/package/normalize.css/v/3.0.3) but they're quite old and not that much used anymore.
 
 **Don't forget that you can always customize the resets by yourself!**
+
+## Summary
+
+- A CSS reset is set of rules that you can add in your CSS code.
+- It typically resets browser defaults.
+- You can customize the resets on your own.
