@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A random  blog focusing on web development.">
+    <meta name="description" content="Should I use this or that or none? Width or max-width? Height or min-height?">
     <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="randev">
-    <meta name="title" content="Tagged &#39;CSS&#39;">
-    <meta name="description" content="A random  blog focusing on web development.">
+    <meta name="title" content="Setting widths and heights">
+    <meta name="description" content="Should I use this or that or none? Width or max-width? Height or min-height?">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://geomydas.github.io/randev/">
-    <meta property="og:title" content="Tagged &#39;CSS&#39;">
-    <meta property="og:description" content="A random  blog focusing on web development.">
+    <meta property="og:title" content="Setting widths and heights">
+    <meta property="og:description" content="Should I use this or that or none? Width or max-width? Height or min-height?">
     <meta property="og:image" content="https://geomydas.github.io/randev/images/meta-tags.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://geomydas.github.io/randev/">
-    <meta property="twitter:title" content="Tagged &#39;CSS&#39;">
-    <meta property="twitter:description" content="A random  blog focusing on web development.">
+    <meta property="twitter:title" content="Setting widths and heights">
+    <meta property="twitter:description" content="Should I use this or that or none? Width or max-width? Height or min-height?">
     <meta property="twitter:image" content="https://geomydas.github.io/randev/images/meta-tags.png">
     <!-- prettier-ignore-start -->
 		<style>/*! tailwindcss v4.0.0-beta.7 | MIT License | https://tailwindcss.com */
@@ -2442,7 +2442,7 @@
   initial-value: 1;
 }</style>
 		<!-- prettier-ignore-end -->
-    <title>Tagged &#39;CSS&#39;</title>
+    <title>Setting widths and heights</title>
   </head>
   <body class="font-inter bg-gray-100 text-base leading-normal font-normal text-gray-800 dark:bg-gray-800 dark:text-gray-100">
     <a class="sr-only text-center text-2xl font-black focus:not-sr-only focus:block focus:p-8 dark:bg-gray-700" href="#skipToMainContent">Skip to main content</a>
@@ -2484,64 +2484,39 @@
 
     <main id="skipToMainContent">
       <heading-anchors> 
+<article class="prose dark:prose-invert mx-auto w-full max-w-prose p-8">
+  <h1 id="setting-widths-and-heights">Setting widths and heights</h1>
 
-<div class="mx-auto w-full max-w-4xl p-4">
-  <h1 class="bg-rainbow mb-12 w-fit bg-clip-text text-5xl font-black tracking-tighter text-transparent">
-    Tagged
-    <em> CSS </em>
-  </h1>
+  <ul class="not-prose flex flex-wrap gap-4">
+    <li class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 text-sm font-bold dark:bg-gray-900">
+      <time datetime="2024-12-14">14 December 2024</time>
+    </li>
+      <li class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 text-sm font-bold dark:bg-gray-900">
+        <a href="/randev/tags/css/">CSS</a>
+      </li>
+  </ul>
 
-  
-  <ol class="mb-12 grid grid-cols-[repeat(auto-fit,minmax(min(100%,theme(spacing.80)),1fr))] grid-rows-[repeat(,auto)] gap-8" reversed="">
-    <li class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md after:absolute after:inset-0 after:-z-10 after:hidden after:h-[calc(100%+1rem)] after:w-[calc(100%+1rem)] after:-translate-2 after:rounded-md hover:bg-gray-50 hover:after:block dark:bg-gray-900 hover:dark:bg-gray-700">
-      <h2 class="mb-6 text-4xl font-black">
-        <a class="group-hover/card:bg-rainbow bg-clip-text group-hover/card:text-transparent" href="/randev/blog/2-Setting-widths-and-heights/">Setting widths and heights</a>
-      </h2>
-      <p class="mb-4 text-sm">
-        <time datetime="2024-12-14">December 2024</time>
-      </p>
-      <p class="mb-8 text-lg leading-relaxed">Should I use this or that or none? Width or max-width? Height or min-height?</p>
-      <ul class="flex h-fit flex-wrap gap-4">
-        
-          
-        
-          
-            <li class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 font-bold group-hover/card:bg-gray-200 dark:bg-gray-800 group-hover/card:dark:bg-gray-600">
-              <a class="" href="/randev/tags/css"> CSS</a>
-            </li>
+  <p>Should I use this or that or none? Width or max-width? Height or min-height?</p>
+  <h2 id="1-width">1. <code>width:</code></h2>
+<p>You would often use this with <code>max-width:</code> most of the time. Setting fixed widths such as <code>width: 320px</code> or <code>width: 2rem</code> is rarely done and not even reccomended as you would likely use <code>max-width:</code> for it. Use fixed widths for smaller stuff like icons and avatars which rarely cause overflow.</p>
+<h2 id="2-min-width">2. <code>min-width</code></h2>
+<h2 id="3-max-width">3. <code>max-width:</code></h2>
+<h2 id="4-height">4. <code>height</code></h2>
+<h2 id="5-min-height">5. <code>min-height</code></h2>
+<h2 id="6-max-height">6. <code>max-height</code></h2>
+
+      <ul class="not-prose mt-24 grid grid-cols-2 grid-rows-1 gap-8">
+          <li class="[grid-column-start:1]">
+            <span class="block font-bold">Previous:</span>
+            <a class="hover:underline" href="/randev/blog/1-Using-a-CSS-reset/">Using a CSS reset</a>
+          </li>
         
       </ul>
-    </li>
-    <li class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md after:absolute after:inset-0 after:-z-10 after:hidden after:h-[calc(100%+1rem)] after:w-[calc(100%+1rem)] after:-translate-2 after:rounded-md hover:bg-gray-50 hover:after:block dark:bg-gray-900 hover:dark:bg-gray-700">
-      <h2 class="mb-6 text-4xl font-black">
-        <a class="group-hover/card:bg-rainbow bg-clip-text group-hover/card:text-transparent" href="/randev/blog/1-Using-a-CSS-reset/">Using a CSS reset</a>
-      </h2>
-      <p class="mb-4 text-sm">
-        <time datetime="2024-12-14">December 2024</time>
-      </p>
-      <p class="mb-8 text-lg leading-relaxed">What&#39;s a CSS reset? What does it do? What should I use?</p>
-      <ul class="flex h-fit flex-wrap gap-4">
-        
-          
-        
-          
-            <li class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 font-bold group-hover/card:bg-gray-200 dark:bg-gray-800 group-hover/card:dark:bg-gray-600">
-              <a class="" href="/randev/tags/css"> CSS</a>
-            </li>
-        
-      </ul>
-    </li>
-</ol>
-
-
-
-  <a class="font-bold text-2xl text-blue-500 hover:after:bg-rainbow after:scale-x-0 hover:after:scale-x-100 after:transition bg-clip-text hover:bg-rainbow hover:text-transparent dark:text-blue-400 after:w-full relative after:left-0 after:-bottom-2 after:h-1 after:bg-blue-500 after:absolute  " href="/randev/blog/">See all tags →</a>
-</div>
-
+</article>
  </heading-anchors>
     </main>
 
-    <!-- This page `/tags/css/` was built on 2024-12-14T12:06:05.359Z -->
+    <!-- This page `/blog/2-Setting-widths-and-heights/` was built on 2024-12-14T12:06:05.360Z -->
     <!-- prettier-ignore-start -->
 		<script type="module" src="/randev/dist/rJ3_G-2ArF.js"></script>
 		<!-- prettier-ignore-end -->

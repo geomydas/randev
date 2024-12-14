@@ -5,18 +5,32 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/randev/feed/feed.xml" rel="self" />
   <link href="https://example.com/randev/" />
-  <updated>2024-12-11T10:48:49Z</updated>
+  <updated>2024-12-14T12:05:46Z</updated>
   <id>https://example.com/randev/</id>
   <author>
     <name>Your Name</name>
   </author>
   <entry>
+    <title>Setting widths and heights</title>
+    <link href="https://example.com/randev/blog/2-Setting-widths-and-heights/" />
+    <updated>2024-12-14T12:05:46Z</updated>
+    <id>https://example.com/randev/blog/2-Setting-widths-and-heights/</id>
+    <content type="html">&lt;h2 id=&quot;1-width&quot;&gt;1. &lt;code&gt;width:&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;You would often use this with &lt;code&gt;max-width:&lt;/code&gt; most of the time. Setting fixed widths such as &lt;code&gt;width: 320px&lt;/code&gt; or &lt;code&gt;width: 2rem&lt;/code&gt; is rarely done and not even reccomended as you would likely use &lt;code&gt;max-width:&lt;/code&gt; for it. Use fixed widths for smaller stuff like icons and avatars which rarely cause overflow.&lt;/p&gt;
+&lt;h2 id=&quot;2-min-width&quot;&gt;2. &lt;code&gt;min-width&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;3-max-width&quot;&gt;3. &lt;code&gt;max-width:&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;4-height&quot;&gt;4. &lt;code&gt;height&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;5-min-height&quot;&gt;5. &lt;code&gt;min-height&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;6-max-height&quot;&gt;6. &lt;code&gt;max-height&lt;/code&gt;&lt;/h2&gt;
+</content>
+  </entry>
+  <entry>
     <title>Using a CSS reset</title>
-    <link href="https://example.com/randev/blog/1-SettingFixedWidthsAndHeights/" />
-    <updated>2024-12-11T10:48:49Z</updated>
-    <id>https://example.com/randev/blog/1-SettingFixedWidthsAndHeights/</id>
+    <link href="https://example.com/randev/blog/1-Using-a-CSS-reset/" />
+    <updated>2024-12-14T12:05:46Z</updated>
+    <id>https://example.com/randev/blog/1-Using-a-CSS-reset/</id>
     <content type="html">&lt;h2 id=&quot;whats-a-reset&quot;&gt;What&#39;s a reset?&lt;/h2&gt;
-&lt;p&gt;A CSS reset is a set of rules that you can add in your code that usually provides better defaults. You don&#39;t need to install or add dependencies, it is as simple as` copy &amp;amp; pasting it in your code. In a way, it provides a blank canvas to start your project on. &lt;a href=&quot;https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1&quot;&gt;This reset from Josh Comeau&lt;/a&gt; is an example. &lt;a href=&quot;https://piccalil.li/blog/a-more-modern-css-reset/&quot;&gt;This reset from Andy Bell is an another example&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A CSS reset is a set of rules that you can add in your code that usually provides better defaults. You don&#39;t need to install or add dependencies, it is as simple as copy &amp;amp; pasting it in your code. In a way, it provides a blank canvas to start your project on. &lt;a href=&quot;https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1&quot;&gt;This reset from Josh Comeau&lt;/a&gt; is an example. &lt;a href=&quot;https://piccalil.li/blog/a-more-modern-css-reset/&quot;&gt;This reset from Andy Bell is an another example&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;what-does-it-do&quot;&gt;What does it do?&lt;/h2&gt;
 &lt;p&gt;It provides better defaults depending on the type of project. Most resets typically share some lines of code and it doesn&#39;t matter that much depending on the type of project. What I mean by &amp;quot;type of project&amp;quot; is text-heavy sites like blogs, heavily-customized sites like landing pages, sites that use a different CSS approach like Atomic CSS.&lt;/p&gt;
 &lt;p&gt;A code example that can be normally found in most resets is this:&lt;/p&gt;
@@ -28,6 +42,12 @@
 &lt;h2 id=&quot;what-should-i-use&quot;&gt;What should I use?&lt;/h2&gt;
 &lt;p&gt;If your site is more text-heavy and similar to blogs, use &lt;a href=&quot;https://piccalil.li/blog/a-more-modern-css-reset/&quot;&gt;Andy Bell&#39;s&lt;/a&gt;. If your site is more customized and similar to landing pages, use &lt;a href=&quot;https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1&quot;&gt;Josh Comeau&#39;s&lt;/a&gt;. You might have heard of other resets like &lt;a href=&quot;https://meyerweb.com/eric/tools/css/reset/&quot;&gt;meyerweb&lt;/a&gt; or &lt;a href=&quot;https://www.npmjs.com/package/normalize.css/v/3.0.3&quot;&gt;normalize&lt;/a&gt; but they&#39;re quite old and not that much used anymore.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Don&#39;t forget that you can always customize the resets by yourself!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A CSS reset is set of rules that you can add in your CSS code.&lt;/li&gt;
+&lt;li&gt;It typically resets browser defaults.&lt;/li&gt;
+&lt;li&gt;You can customize the resets on your own.&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
 </feed>
