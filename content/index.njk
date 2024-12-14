@@ -9,9 +9,9 @@ const numberOfLatestPostsToShow = 6;
 
 {% set postsCount = collections.posts | length %}
 
-<div class="p-8 w-full mx-auto max-w-4xl">
+<div class="mx-auto w-full max-w-4xl p-8">
   <h1
-    class="font-black  text-5xl mb-12 tracking-tighter bg-clip-text text-transparent bg-rainbow w-fit   "
+    class="bg-rainbow mb-12 w-fit bg-clip-text text-5xl font-black tracking-tighter text-transparent"
   >
     Latest Posts
   </h1>
@@ -21,7 +21,7 @@ const numberOfLatestPostsToShow = 6;
   {% include "postslist.njk" %}
 
   <a
-    class="font-bold text-2xl text-blue-500 hover:after:bg-rainbow after:scale-x-0 hover:after:scale-x-100 after:transition bg-clip-text hover:bg-rainbow hover:text-transparent dark:text-blue-400 after:w-full relative after:left-0 after:-bottom-2 after:h-1 after:bg-blue-500 after:absolute  "
+    class="hover:after:bg-rainbow hover:bg-rainbow relative bg-clip-text text-2xl font-bold text-blue-500 after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:bg-blue-500 after:transition hover:text-transparent hover:after:scale-x-100 dark:text-blue-400"
     href="blog.njk"
     >See all posts →</a
   >
