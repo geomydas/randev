@@ -1251,6 +1251,12 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .scale-150 {
+    --tw-scale-x: 150%;
+    --tw-scale-y: 150%;
+    --tw-scale-z: 150%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -1698,6 +1704,21 @@
     --tw-prose-invert-th-borders: var(--color-gray-800);
     --tw-prose-invert-td-borders: var(--color-gray-800);
   }
+  .group-focus-within\:bg-rainbow {
+    &:is(:where(.group):focus-within *) {
+      background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
+    }
+  }
+  .group-focus-within\/card\:bg-red-400 {
+    &:is(:where(.group\/card):focus-within *) {
+      background-color: var(--color-red-400);
+    }
+  }
+  .group-focus-within\/card\:bg-rainbow {
+    &:is(:where(.group\/card):focus-within *) {
+      background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
+    }
+  }
   .group-hover\:bg-rainbow {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1738,6 +1759,70 @@
       @media (hover: hover) {
         color: transparent;
       }
+    }
+  }
+  .group-focus\/card\:scale-150 {
+    &:is(:where(.group\/card):focus *) {
+      --tw-scale-x: 150%;
+      --tw-scale-y: 150%;
+      --tw-scale-z: 150%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .group-has-focus\:border-4 {
+    &:is(:where(.group):has(*:focus) *) {
+      border-style: var(--tw-border-style);
+      border-width: 4px;
+    }
+  }
+  .group-has-focus\:border-5 {
+    &:is(:where(.group):has(*:focus) *) {
+      border-style: var(--tw-border-style);
+      border-width: 5px;
+    }
+  }
+  .group-has-focus\:bg-red-400 {
+    &:is(:where(.group):has(*:focus) *) {
+      background-color: var(--color-red-400);
+    }
+  }
+  .group-has-focus\:bg-rainbow {
+    &:is(:where(.group):has(*:focus) *) {
+      background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
+    }
+  }
+  .group-has-focus\:outline-2 {
+    &:is(:where(.group):has(*:focus) *) {
+      outline-style: var(--tw-outline-style);
+      outline-width: 2px;
+    }
+  }
+  .group-has-focus\/card\:scale-150 {
+    &:is(:where(.group\/card):has(*:focus) *) {
+      --tw-scale-x: 150%;
+      --tw-scale-y: 150%;
+      --tw-scale-z: 150%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .group-has-focus\/card\:bg-gray-200 {
+    &:is(:where(.group\/card):has(*:focus) *) {
+      background-color: var(--color-gray-200);
+    }
+  }
+  .group-has-focus\/card\:bg-red-400 {
+    &:is(:where(.group\/card):has(*:focus) *) {
+      background-color: var(--color-red-400);
+    }
+  }
+  .group-has-focus\/card\:bg-rainbow {
+    &:is(:where(.group\/card):has(*:focus) *) {
+      background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
+    }
+  }
+  .group-has-focus\/card\:text-transparent {
+    &:is(:where(.group\/card):has(*:focus) *) {
+      color: transparent;
     }
   }
   .after\:absolute {
@@ -1821,16 +1906,40 @@
       animation: bgRotate 1s linear infinite;
     }
   }
+  .after\:rounded-2xl {
+    &::after {
+      content: var(--tw-content);
+      border-radius: var(--radius-2xl);
+    }
+  }
+  .after\:rounded-lg {
+    &::after {
+      content: var(--tw-content);
+      border-radius: var(--radius-lg);
+    }
+  }
   .after\:rounded-md {
     &::after {
       content: var(--tw-content);
       border-radius: var(--radius-md);
     }
   }
+  .after\:rounded-xl {
+    &::after {
+      content: var(--tw-content);
+      border-radius: var(--radius-xl);
+    }
+  }
   .after\:bg-blue-500 {
     &::after {
       content: var(--tw-content);
       background-color: var(--color-blue-500);
+    }
+  }
+  .after\:bg-rainbow {
+    &::after {
+      content: var(--tw-content);
+      background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
     }
   }
   .after\:bg-rainbowConic {
@@ -1923,9 +2032,32 @@
       display: block;
     }
   }
+  .focus\:bg-red-400 {
+    &:focus {
+      background-color: var(--color-red-400);
+    }
+  }
   .focus\:p-8 {
     &:focus {
       padding: calc(var(--spacing) * 8);
+    }
+  }
+  .has-focus\:bg-gray-50 {
+    &:has(*:focus) {
+      background-color: var(--color-gray-50);
+    }
+  }
+  .has-focus\:bg-red-400 {
+    &:has(*:focus) {
+      background-color: var(--color-red-400);
+    }
+  }
+  .has-focus\:after\:block {
+    &:has(*:focus) {
+      &::after {
+        content: var(--tw-content);
+        display: block;
+      }
     }
   }
   .dark\:bg-gray-700 {
@@ -1989,12 +2121,26 @@
       }
     }
   }
+  .group-has-focus\/card\:dark\:bg-gray-600 {
+    &:is(:where(.group\/card):has(*:focus) *) {
+      @media (prefers-color-scheme: dark) {
+        background-color: var(--color-gray-600);
+      }
+    }
+  }
   .hover\:dark\:bg-gray-700 {
     &:hover {
       @media (hover: hover) {
         @media (prefers-color-scheme: dark) {
           background-color: var(--color-gray-700);
         }
+      }
+    }
+  }
+  .has-focus\:dark\:bg-gray-700 {
+    &:has(*:focus) {
+      @media (prefers-color-scheme: dark) {
+        background-color: var(--color-gray-700);
       }
     }
   }
@@ -2149,6 +2295,9 @@
 @supports (-moz-orient: inline) {
   @layer base {
     *, ::before, ::after, ::backdrop {
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-rotate-x: rotateX(0);
       --tw-rotate-y: rotateY(0);
       --tw-rotate-z: rotateZ(0);
@@ -2193,9 +2342,6 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-rotate: 0deg;
     }
   }
@@ -2225,6 +2371,21 @@
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -2419,21 +2580,6 @@
   syntax: "*";
   inherits: false;
   initial-value: 0;
-}
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
 }</style>
 		<!-- prettier-ignore-end -->
     <title>randev</title>
@@ -2484,7 +2630,7 @@
  </heading-anchors>
     </main>
 
-    <!-- This page `/about/` was built on 2024-12-15T04:34:51.788Z -->
+    <!-- This page `/about/` was built on 2024-12-15T04:49:26.856Z -->
     <!-- prettier-ignore-start -->
 		<script type="module" src="/randev/dist/rJ3_G-2ArF.js"></script>
 		<!-- prettier-ignore-end -->
