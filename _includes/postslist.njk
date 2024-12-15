@@ -4,11 +4,11 @@
 >
   {%- for post in postslist | reverse %}
     <li
-      class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md after:absolute after:inset-0 after:-z-10 after:hidden after:h-[calc(100%+1rem)] after:w-[calc(100%+1rem)] after:-translate-2 after:rounded-md hover:bg-gray-50 hover:after:block dark:bg-gray-900 hover:dark:bg-gray-700"
+      class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md after:absolute after:inset-0 after:-z-10 after:hidden after:h-[calc(100%+1rem)] after:w-[calc(100%+1rem)] after:-translate-2 after:rounded-xl hover:bg-gray-50 hover:after:block has-focus:bg-gray-50 has-focus:after:block dark:bg-gray-900 hover:dark:bg-gray-700 has-focus:dark:bg-gray-700"
     >
       <h2 class="mb-6 text-4xl font-black">
         <a
-          class="group-hover/card:bg-rainbow bg-clip-text group-hover/card:text-transparent"
+          class="group-hover/card:bg-rainbow group-has-focus/card:bg-rainbow block bg-clip-text group-hover/card:text-transparent group-has-focus/card:text-transparent"
           href="{{ post.url }}"
           >{{ post.data.title }}</a
         >
@@ -24,7 +24,7 @@
           {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
           {%- if tag !== "posts" %}
             <li
-              class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 font-bold group-hover/card:bg-gray-200 dark:bg-gray-800 group-hover/card:dark:bg-gray-600"
+              class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 font-bold group-hover/card:bg-gray-200 group-has-focus/card:bg-gray-200 dark:bg-gray-800 group-hover/card:dark:bg-gray-600 group-has-focus/card:dark:bg-gray-600"
             >
               <a class="" href="/tags/{{ tag | slugify }}"> {{ tag }}</a>
             </li>
