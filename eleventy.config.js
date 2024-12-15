@@ -152,8 +152,8 @@ export const config = {
   // -----------------------------------------------------------------
 
   // If your site deploys to a subdirectory, change `pathPrefix`.
-  // Read more: 
- //  https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix
+  // Read more:
+  //  https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix
 
   // When paired with the HTML <base> plugin https://www.11ty.dev/docs/plugins/html-base/
   // it will transform any absolute URLs in your HTML to include this
