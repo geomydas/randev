@@ -4,7 +4,7 @@
 >
   {%- for post in postslist | reverse %}
     <li
-      class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md after:absolute after:inset-0 after:-z-10 after:hidden after:h-[calc(100%+1rem)] after:w-[calc(100%+1rem)] after:-translate-2 after:rounded-xl hover:bg-gray-50 hover:after:block has-focus:bg-gray-50 has-focus:after:block dark:bg-gray-900 hover:dark:bg-gray-700 has-focus:dark:bg-gray-700"
+      class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md [--border-size:1rem] after:absolute after:inset-0 after:-z-10 after:hidden after:size-[calc(100%+var(--border-size))] after:-translate-[calc(var(--border-size)/2)] after:rounded-xl hover:bg-gray-50 hover:after:block has-focus:bg-gray-50 has-focus:after:block dark:bg-gray-900 hover:dark:bg-gray-700 has-focus:dark:bg-gray-700"
     >
       <h2 class="mb-6 text-4xl font-black">
         <a
