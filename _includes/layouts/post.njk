@@ -25,29 +25,39 @@ layout: layouts/base.njk
 
   <p>{{ description or metadata.description }}</p>
   {{ content | safe }}
+  <hr class="not-prose mt-24 mb-8 border-dashed border-gray-400 border-t-2">
+  <a href="#" class="not-prose mx-auto px-4 py-2 bg-gray-300 rounded-md text-sm font-bold block w-fit">Back to top</a>
+</article>
 
+<nav aria-label="post">
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
     {%- set nextPost = collections.posts | getNextCollectionItem %}
     {%- if nextPost or previousPost %}
-      <ul class="not-prose mt-24 grid grid-cols-2 grid-rows-1 gap-8">
-        {%- if previousPost %}
-          <li class="[grid-column-start:1]">
-            <span class="block font-bold">Previous:</span>
-            <a class="hover:underline" href="{{ previousPost.url }}"
-              >{{ previousPost.data.title }}</a
-            >
-          </li>
-        {% endif %}
-        {%- if nextPost %}
-          <li class="[grid-column-start:2] text-right">
-            <span class="block font-bold">Next: </span>
-            <a class="hover:underline" href="{{ nextPost.url }}"
-              >{{ nextPost.data.title }}</a
-            >
-          </li>
-        {% endif %}
+      <ul class="mt-24 bg-gray-50" role="list">
+        <div class="mx-auto grid max-w-5xl grid-cols-2 grid-rows-1 gap-8 p-8">
+          {%- if previousPost %}
+            <li class="[grid-column-start:1] text-lg">
+              <span class="block">Previous:</span>
+              <a
+                class="bg-rainbow after:bg-rainbow relative bg-clip-text font-bold text-transparent after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transition hover:after:scale-x-100"
+                href="{{ nextPost.url }}"
+                >{{ previousPost.data.title }}</a
+              >
+            </li>
+          {% endif %}
+          {%- if nextPost %}
+            <li class="[grid-column-start:2] text-right text-lg">
+              <span class="block">Next: </span>
+              <a
+                class="bg-rainbow after:bg-rainbow relative bg-clip-text font-bold text-transparent after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transition hover:after:scale-x-100"
+                href="{{ nextPost.url }}"
+                >{{ nextPost.data.title }}</a
+              >
+            </li>
+          {% endif %}
+        </div>
       </ul>
     {%- endif %}
   {%- endif %}
-</article>
+</nav>
