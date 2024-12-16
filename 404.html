@@ -1212,6 +1212,9 @@
   .inline {
     display: inline;
   }
+  .inline-block {
+    display: inline-block;
+  }
   .inline-flex {
     display: inline-flex;
   }
@@ -1220,6 +1223,9 @@
   }
   .table {
     display: table;
+  }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
   }
   .h-fit {
     height: fit-content;
@@ -1232,6 +1238,9 @@
   }
   .max-w-4xl {
     max-width: var(--container-4xl);
+  }
+  .max-w-5xl {
+    max-width: var(--container-5xl);
   }
   .max-w-lg {
     max-width: var(--container-lg);
@@ -1331,13 +1340,47 @@
     border-style: var(--tw-border-style);
     border-width: 0px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
+  .border-5 {
+    border-style: var(--tw-border-style);
+    border-width: 5px;
+  }
   .border-y {
     border-block-style: var(--tw-border-style);
     border-block-width: 1px;
   }
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
+  }
+  .border-t-4 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 4px;
+  }
+  .border-t-44 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 44px;
+  }
   .border-dashed {
     --tw-border-style: dashed;
     border-style: dashed;
+  }
+  .border-dotted {
+    --tw-border-style: dotted;
+    border-style: dotted;
+  }
+  .border-gray-400 {
+    border-color: var(--color-gray-400);
+  }
+  .bg-gray-50 {
+    background-color: var(--color-gray-50);
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
@@ -1347,6 +1390,9 @@
   }
   .bg-gray-300 {
     background-color: var(--color-gray-300);
+  }
+  .bg-gray-400 {
+    background-color: var(--color-gray-400);
   }
   .bg-green-400 {
     background-color: var(--color-green-400);
@@ -1664,9 +1710,6 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
-  .\[--border-size\:16px\] {
-    --border-size: 16px;
-  }
   .\[--border-size\:1rem\] {
     --border-size: 1rem;
   }
@@ -1797,25 +1840,11 @@
       display: none;
     }
   }
-  .after\:size-\[calc\(100\%\+1rem\)\] {
-    &::after {
-      content: var(--tw-content);
-      width: calc(100% + 1rem);
-      height: calc(100% + 1rem);
-    }
-  }
   .after\:size-\[calc\(100\%\+var\(--border-size\)\)\] {
     &::after {
       content: var(--tw-content);
       width: calc(100% + var(--border-size));
       height: calc(100% + var(--border-size));
-    }
-  }
-  .after\:size-\[calc\(100\%\+var\)\] {
-    &::after {
-      content: var(--tw-content);
-      width: calc(100% + var);
-      height: calc(100% + var);
     }
   }
   .after\:h-1 {
@@ -1824,46 +1853,10 @@
       height: calc(var(--spacing) * 1);
     }
   }
-  .after\:h-\[calc\(100\%\+1rem\)\] {
-    &::after {
-      content: var(--tw-content);
-      height: calc(100% + 1rem);
-    }
-  }
-  .after\:w-\[calc\(100\%\+1rem\)\] {
-    &::after {
-      content: var(--tw-content);
-      width: calc(100% + 1rem);
-    }
-  }
   .after\:w-full {
     &::after {
       content: var(--tw-content);
       width: 100%;
-    }
-  }
-  .after\:-translate-2 {
-    &::after {
-      content: var(--tw-content);
-      --tw-translate-x: calc(var(--spacing) * -2);
-      --tw-translate-y: calc(var(--spacing) * -2);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-  .after\:-translate-\[calc\(var\(--border-size\)\)\] {
-    &::after {
-      content: var(--tw-content);
-      --tw-translate-x: calc(calc(var(--border-size)) * -1);
-      --tw-translate-y: calc(calc(var(--border-size)) * -1);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-  .after\:-translate-\[calc\(var\(--border-size\)\/-2\)\] {
-    &::after {
-      content: var(--tw-content);
-      --tw-translate-x: calc(calc(var(--border-size) / -2) * -1);
-      --tw-translate-y: calc(calc(var(--border-size) / -2) * -1);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .after\:-translate-\[calc\(var\(--border-size\)\/2\)\] {
@@ -1911,6 +1904,12 @@
       background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
     }
   }
+  .after\:bg-clip-text {
+    &::after {
+      content: var(--tw-content);
+      background-clip: text;
+    }
+  }
   .after\:transition {
     &::after {
       content: var(--tw-content);
@@ -1926,10 +1925,45 @@
       }
     }
   }
+  .hover\:bg-gray-200 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-200);
+      }
+    }
+  }
+  .hover\:bg-gray-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-400);
+      }
+    }
+  }
   .hover\:bg-rainbow {
     &:hover {
       @media (hover: hover) {
         background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
+      }
+    }
+  }
+  .hover\:bg-rainbowConic {
+    &:hover {
+      @media (hover: hover) {
+        background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
+      }
+    }
+  }
+  .hover\:bg-clip-text {
+    &:hover {
+      @media (hover: hover) {
+        background-clip: text;
+      }
+    }
+  }
+  .hover\:text-black {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-black);
       }
     }
   }
@@ -2583,7 +2617,7 @@
  </heading-anchors>
     </main>
 
-    <!-- This page `/404.html` was built on 2024-12-16T08:31:42.543Z -->
+    <!-- This page `/404.html` was built on 2024-12-16T09:42:45.002Z -->
     <!-- prettier-ignore-start -->
 		<script type="module" src="/randev/dist/rJ3_G-2ArF.js"></script>
 		<!-- prettier-ignore-end -->

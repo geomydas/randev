@@ -20,6 +20,7 @@
   );
 }
 
+
 @utility bg-rainbowConic {
   background-image: conic-gradient(
     from var(--tw-rotate) in lch,
