@@ -5,7 +5,7 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/randev/feed/feed.xml" rel="self" />
   <link href="https://example.com/randev/" />
-  <updated>2024-12-15T04:49:05Z</updated>
+  <updated>2024-12-16T08:31:13Z</updated>
   <id>https://example.com/randev/</id>
   <author>
     <name>Your Name</name>
@@ -13,7 +13,7 @@
   <entry>
     <title>Setting widths and heights</title>
     <link href="https://example.com/randev/blog/2-Setting-widths-and-heights/" />
-    <updated>2024-12-15T04:49:05Z</updated>
+    <updated>2024-12-16T08:31:13Z</updated>
     <id>https://example.com/randev/blog/2-Setting-widths-and-heights/</id>
     <content type="html">&lt;h2 id=&quot;1-width&quot;&gt;1. &lt;code&gt;width:&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;You would often use this with &lt;code&gt;max-width:&lt;/code&gt; most of the time. Setting fixed widths such as &lt;code&gt;width: 320px&lt;/code&gt; or &lt;code&gt;width: 2rem&lt;/code&gt; is rarely done and not even reccomended as you would likely use &lt;code&gt;max-width:&lt;/code&gt; for it. Use fixed widths for smaller stuff like icons and avatars which rarely cause overflow.&lt;/p&gt;
@@ -27,7 +27,7 @@
   <entry>
     <title>Using a CSS reset</title>
     <link href="https://example.com/randev/blog/1-Using-a-CSS-reset/" />
-    <updated>2024-12-15T04:49:05Z</updated>
+    <updated>2024-12-16T08:31:13Z</updated>
     <id>https://example.com/randev/blog/1-Using-a-CSS-reset/</id>
     <content type="html">&lt;h2 id=&quot;whats-a-reset&quot;&gt;What&#39;s a reset?&lt;/h2&gt;
 &lt;p&gt;A CSS reset is a set of rules that you can add in your code that usually provides better defaults. You don&#39;t need to install or add dependencies, it is as simple as copy &amp;amp; pasting it in your code. In a way, it provides a blank canvas to start your project on. &lt;a href=&quot;https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1&quot;&gt;This reset from Josh Comeau&lt;/a&gt; is an example. &lt;a href=&quot;https://piccalil.li/blog/a-more-modern-css-reset/&quot;&gt;This reset from Andy Bell is an another example&lt;/a&gt;&lt;/p&gt;

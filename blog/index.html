@@ -1251,12 +1251,6 @@
   .border-collapse {
     border-collapse: collapse;
   }
-  .scale-150 {
-    --tw-scale-x: 150%;
-    --tw-scale-y: 150%;
-    --tw-scale-z: 150%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -1670,6 +1664,12 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
+  .\[--border-size\:16px\] {
+    --border-size: 16px;
+  }
+  .\[--border-size\:1rem\] {
+    --border-size: 1rem;
+  }
   .prose {
     --tw-prose-body: var(--color-gray-800);
     --tw-prose-headings: var(--color-gray-800);
@@ -1703,21 +1703,6 @@
     --tw-prose-invert-pre-bg: var(--color-gray-900);
     --tw-prose-invert-th-borders: var(--color-gray-800);
     --tw-prose-invert-td-borders: var(--color-gray-800);
-  }
-  .group-focus-within\:bg-rainbow {
-    &:is(:where(.group):focus-within *) {
-      background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
-    }
-  }
-  .group-focus-within\/card\:bg-red-400 {
-    &:is(:where(.group\/card):focus-within *) {
-      background-color: var(--color-red-400);
-    }
-  }
-  .group-focus-within\/card\:bg-rainbow {
-    &:is(:where(.group\/card):focus-within *) {
-      background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
-    }
   }
   .group-hover\:bg-rainbow {
     &:is(:where(.group):hover *) {
@@ -1761,58 +1746,9 @@
       }
     }
   }
-  .group-focus\/card\:scale-150 {
-    &:is(:where(.group\/card):focus *) {
-      --tw-scale-x: 150%;
-      --tw-scale-y: 150%;
-      --tw-scale-z: 150%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-  }
-  .group-has-focus\:border-4 {
-    &:is(:where(.group):has(*:focus) *) {
-      border-style: var(--tw-border-style);
-      border-width: 4px;
-    }
-  }
-  .group-has-focus\:border-5 {
-    &:is(:where(.group):has(*:focus) *) {
-      border-style: var(--tw-border-style);
-      border-width: 5px;
-    }
-  }
-  .group-has-focus\:bg-red-400 {
-    &:is(:where(.group):has(*:focus) *) {
-      background-color: var(--color-red-400);
-    }
-  }
-  .group-has-focus\:bg-rainbow {
-    &:is(:where(.group):has(*:focus) *) {
-      background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
-    }
-  }
-  .group-has-focus\:outline-2 {
-    &:is(:where(.group):has(*:focus) *) {
-      outline-style: var(--tw-outline-style);
-      outline-width: 2px;
-    }
-  }
-  .group-has-focus\/card\:scale-150 {
-    &:is(:where(.group\/card):has(*:focus) *) {
-      --tw-scale-x: 150%;
-      --tw-scale-y: 150%;
-      --tw-scale-z: 150%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-  }
   .group-has-focus\/card\:bg-gray-200 {
     &:is(:where(.group\/card):has(*:focus) *) {
       background-color: var(--color-gray-200);
-    }
-  }
-  .group-has-focus\/card\:bg-red-400 {
-    &:is(:where(.group\/card):has(*:focus) *) {
-      background-color: var(--color-red-400);
     }
   }
   .group-has-focus\/card\:bg-rainbow {
@@ -1861,6 +1797,27 @@
       display: none;
     }
   }
+  .after\:size-\[calc\(100\%\+1rem\)\] {
+    &::after {
+      content: var(--tw-content);
+      width: calc(100% + 1rem);
+      height: calc(100% + 1rem);
+    }
+  }
+  .after\:size-\[calc\(100\%\+var\(--border-size\)\)\] {
+    &::after {
+      content: var(--tw-content);
+      width: calc(100% + var(--border-size));
+      height: calc(100% + var(--border-size));
+    }
+  }
+  .after\:size-\[calc\(100\%\+var\)\] {
+    &::after {
+      content: var(--tw-content);
+      width: calc(100% + var);
+      height: calc(100% + var);
+    }
+  }
   .after\:h-1 {
     &::after {
       content: var(--tw-content);
@@ -1893,6 +1850,30 @@
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
+  .after\:-translate-\[calc\(var\(--border-size\)\)\] {
+    &::after {
+      content: var(--tw-content);
+      --tw-translate-x: calc(calc(var(--border-size)) * -1);
+      --tw-translate-y: calc(calc(var(--border-size)) * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .after\:-translate-\[calc\(var\(--border-size\)\/-2\)\] {
+    &::after {
+      content: var(--tw-content);
+      --tw-translate-x: calc(calc(var(--border-size) / -2) * -1);
+      --tw-translate-y: calc(calc(var(--border-size) / -2) * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .after\:-translate-\[calc\(var\(--border-size\)\/2\)\] {
+    &::after {
+      content: var(--tw-content);
+      --tw-translate-x: calc(calc(var(--border-size) / 2) * -1);
+      --tw-translate-y: calc(calc(var(--border-size) / 2) * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
   .after\:scale-x-0 {
     &::after {
       content: var(--tw-content);
@@ -1904,24 +1885,6 @@
     &::after {
       content: var(--tw-content);
       animation: bgRotate 1s linear infinite;
-    }
-  }
-  .after\:rounded-2xl {
-    &::after {
-      content: var(--tw-content);
-      border-radius: var(--radius-2xl);
-    }
-  }
-  .after\:rounded-lg {
-    &::after {
-      content: var(--tw-content);
-      border-radius: var(--radius-lg);
-    }
-  }
-  .after\:rounded-md {
-    &::after {
-      content: var(--tw-content);
-      border-radius: var(--radius-md);
     }
   }
   .after\:rounded-xl {
@@ -2032,11 +1995,6 @@
       display: block;
     }
   }
-  .focus\:bg-red-400 {
-    &:focus {
-      background-color: var(--color-red-400);
-    }
-  }
   .focus\:p-8 {
     &:focus {
       padding: calc(var(--spacing) * 8);
@@ -2045,11 +2003,6 @@
   .has-focus\:bg-gray-50 {
     &:has(*:focus) {
       background-color: var(--color-gray-50);
-    }
-  }
-  .has-focus\:bg-red-400 {
-    &:has(*:focus) {
-      background-color: var(--color-red-400);
     }
   }
   .has-focus\:after\:block {
@@ -2295,9 +2248,6 @@
 @supports (-moz-orient: inline) {
   @layer base {
     *, ::before, ::after, ::backdrop {
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-rotate-x: rotateX(0);
       --tw-rotate-y: rotateY(0);
       --tw-rotate-z: rotateZ(0);
@@ -2342,6 +2292,9 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-rotate: 0deg;
     }
   }
@@ -2371,21 +2324,6 @@
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
-}
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -2580,6 +2518,21 @@
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }</style>
 		<!-- prettier-ignore-end -->
     <title>randev</title>
@@ -2632,12 +2585,12 @@
 
   
   <ol class="mb-12 grid grid-cols-[repeat(auto-fit,minmax(min(100%,theme(spacing.80)),1fr))] grid-rows-[repeat(,auto)] gap-8" reversed="">
-    <li class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md after:absolute after:inset-0 after:-z-10 after:hidden after:h-[calc(100%+1rem)] after:w-[calc(100%+1rem)] after:-translate-2 after:rounded-xl hover:bg-gray-50 hover:after:block has-focus:bg-gray-50 has-focus:after:block dark:bg-gray-900 hover:dark:bg-gray-700 has-focus:dark:bg-gray-700">
+    <li class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md [--border-size:1rem] after:absolute after:inset-0 after:-z-10 after:hidden after:size-[calc(100%+var(--border-size))] after:-translate-[calc(var(--border-size)/2)] after:rounded-xl hover:bg-gray-50 hover:after:block has-focus:bg-gray-50 has-focus:after:block dark:bg-gray-900 hover:dark:bg-gray-700 has-focus:dark:bg-gray-700">
       <h2 class="mb-6 text-4xl font-black">
         <a class="group-hover/card:bg-rainbow group-has-focus/card:bg-rainbow block bg-clip-text group-hover/card:text-transparent group-has-focus/card:text-transparent" href="/randev/blog/2-Setting-widths-and-heights/">Setting widths and heights</a>
       </h2>
       <p class="mb-4 text-sm">
-        <time datetime="2024-12-15">December 2024</time>
+        <time datetime="2024-12-16">December 2024</time>
       </p>
       <p class="mb-8 text-lg leading-relaxed">Should I use this or that or none? Width or max-width? Height or min-height?</p>
       <ul class="flex h-fit flex-wrap gap-4">
@@ -2651,12 +2604,12 @@
         
       </ul>
     </li>
-    <li class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md after:absolute after:inset-0 after:-z-10 after:hidden after:h-[calc(100%+1rem)] after:w-[calc(100%+1rem)] after:-translate-2 after:rounded-xl hover:bg-gray-50 hover:after:block has-focus:bg-gray-50 has-focus:after:block dark:bg-gray-900 hover:dark:bg-gray-700 has-focus:dark:bg-gray-700">
+    <li class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md [--border-size:1rem] after:absolute after:inset-0 after:-z-10 after:hidden after:size-[calc(100%+var(--border-size))] after:-translate-[calc(var(--border-size)/2)] after:rounded-xl hover:bg-gray-50 hover:after:block has-focus:bg-gray-50 has-focus:after:block dark:bg-gray-900 hover:dark:bg-gray-700 has-focus:dark:bg-gray-700">
       <h2 class="mb-6 text-4xl font-black">
         <a class="group-hover/card:bg-rainbow group-has-focus/card:bg-rainbow block bg-clip-text group-hover/card:text-transparent group-has-focus/card:text-transparent" href="/randev/blog/1-Using-a-CSS-reset/">Using a CSS reset</a>
       </h2>
       <p class="mb-4 text-sm">
-        <time datetime="2024-12-15">December 2024</time>
+        <time datetime="2024-12-16">December 2024</time>
       </p>
       <p class="mb-8 text-lg leading-relaxed">What&#39;s a CSS reset? What does it do? What should I use?</p>
       <ul class="flex h-fit flex-wrap gap-4">
@@ -2677,7 +2630,7 @@
  </heading-anchors>
     </main>
 
-    <!-- This page `/blog/` was built on 2024-12-15T04:49:26.855Z -->
+    <!-- This page `/blog/` was built on 2024-12-16T08:31:42.543Z -->
     <!-- prettier-ignore-start -->
 		<script type="module" src="/randev/dist/rJ3_G-2ArF.js"></script>
 		<!-- prettier-ignore-end -->
