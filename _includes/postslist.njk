@@ -24,9 +24,9 @@
           {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
           {%- if tag !== "posts" %}
             <li
-              class=" hover:bg-gray-300 hover:dark:bg-gray-800 rounded-md bg-gray-300 px-4 py-2 font-bold text-lg group-hover/card:bg-gray-200 group-has-focus/card:bg-gray-200 dark:bg-gray-800 group-hover/card:dark:bg-gray-600 group-has-focus/card:dark:bg-gray-600"
+              class="rounded-md bg-gray-300 px-4 py-2 font-bold group-hover/card:bg-gray-200 group-has-focus/card:bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 group-hover/card:dark:bg-gray-600 group-has-focus/card:dark:bg-gray-600 hover:dark:bg-gray-800"
             >
-              <a  class="g" href="/tags/{{ tag | slugify }}"> {{ tag }}</a>
+              <a href="/tags/{{ tag | slugify }}"> {{ tag }}</a>
             </li>
           {%- endif %}
         {% endfor %}
