@@ -1349,6 +1349,9 @@
   .border-gray-400 {
     border-color: var(--color-gray-400);
   }
+  .bg-blue-400 {
+    background-color: var(--color-blue-400);
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
@@ -1932,6 +1935,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-400);
+      }
+    }
+  }
+  .hover\:bg-transparent {
+    &:hover {
+      @media (hover: hover) {
+        background-color: transparent;
       }
     }
   }
@@ -2608,18 +2618,18 @@
     <main id="skipToMainContent">
       <heading-anchors> 
 <article class="prose dark:prose-invert mx-auto p-8">
-  <h1 id="using-a-css-reset">Using a CSS reset</h1>
-
-  <ul class="not-prose flex flex-wrap gap-4">
-    <li class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 text-sm font-bold dark:bg-gray-900">
-      <time datetime="2025-01-21">21 January 2025</time>
-    </li>
-      <li class="hover:bg-rainbow rounded-md bg-gray-300 px-4 py-2 text-sm font-bold dark:bg-gray-900">
-        <a href="/randev/tags/css/">CSS</a>
+  <header>
+    <h1 id="using-a-css-reset">Using a CSS reset</h1>
+    <ul class="not-prose flex flex-wrap gap-4">
+      <li class="hover:bg-gray-300 rounded-md  bg-gray-200 px-4 py-2 text-sm font-bold dark:bg-gray-900">
+        <time datetime="2025-01-21">21 January 2025</time>
       </li>
-  </ul>
-
-  <p>What&#39;s a CSS reset? What does it do? What should I use?</p>
+        <li class="hover:bg-gray-300 rounded-md bg-gray-200 px-4 py-2 text-sm font-bold dark:bg-gray-900">
+          <a href="/randev/tags/css/">CSS</a>
+        </li>
+    </ul>
+    <p>What&#39;s a CSS reset? What does it do? What should I use?</p>
+  </header>
   <h2 id="whats-a-reset">What's a reset?</h2>
 <p>A CSS reset is a set of rules that you can add in your code that usually provides better defaults. You don't need to install or add dependencies, it is as simple as copy &amp; pasting it in your code. In a way, it provides a blank canvas to start your project on. <a href="https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1">This reset from Josh Comeau</a> is an example. <a href="https://piccalil.li/blog/a-more-modern-css-reset/">This reset from Andy Bell is an another example</a></p>
 <h2 id="what-does-it-do">What does it do?</h2>
@@ -2641,7 +2651,7 @@
 </ul>
 
   <hr class="not-prose mt-24 mb-8 border-dashed border-gray-400 border-t-2">
-  <a href="#" class="not-prose mx-auto px-4 py-2 bg-gray-300 hover:bg-gray-200  dark:bg-gray-900 hover:dark:bg-gray-700  rounded-md text-sm font-bold block w-fit">Back to top</a>
+  <a href="#" class="not-prose mx-auto px-4 py-2 bg-gray-200 hover:bg-gray-300  dark:bg-gray-900 hover:dark:bg-gray-700  rounded-md text-sm font-bold block w-fit">Back to top</a>
 </article>
 
 <nav aria-label="post">
@@ -2649,7 +2659,7 @@
         <div class="mx-auto grid max-w-5xl grid-cols-2 grid-rows-1 gap-8 p-8">
             <li class="[grid-column-start:2] text-right text-lg">
               <span class="block">Next: </span>
-              <a class="bg-rainbow after:bg-rainbow relative bg-clip-text font-bold text-transparent after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transition hover:after:scale-x-100" href="/randev/blog/2-Setting-widths-and-heights/">Setting widths and heights</a>
+              <a class="text-blue-400 after:bg-rainbow relative  font-bold  bg-clip-text hover:bg-rainbow hover:text-transparent after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transition hover:after:scale-x-100" href="/randev/blog/2-Setting-widths-and-heights/">Setting widths and heights</a>
             </li>
           
         </div>
@@ -2658,7 +2668,7 @@
  </heading-anchors>
     </main>
 
-    <!-- This page `/blog/1-Using-a-CSS-reset/` was built on 2025-01-21T10:47:10.931Z -->
+    <!-- This page `/blog/1-Using-a-CSS-reset/` was built on 2025-01-21T10:52:50.783Z -->
     <!-- prettier-ignore-start -->
 		<script type="module" src="/randev/dist/rJ3_G-2ArF.js"></script>
 		<!-- prettier-ignore-end -->
