@@ -7,10 +7,10 @@
     "build": "npx @11ty/eleventy",
     "build:nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
     "build:ghpages": "npx @11ty/eleventy --pathprefix=/randev/",
-    "build:tw": "npx @tailwindcss/cli@next -i public/css/input.css -o public/css/output.css ",
+    "build:tw": "npx @tailwindcss/cli -i public/css/input.css -o public/css/output.css ",
     "start": "npx @11ty/eleventy --serve ",
     "start:ghpages": "npx @11ty/eleventy --pathprefix=/randev/ --serve ",
-    "start:tw": "npx @tailwindcss/cli@next -i public/css/input.css -o public/css/output.css -w",
+    "start:tw": "npx @tailwindcss/cli -i public/css/input.css -o public/css/output.css -w",
     "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
     "debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve ",
     "benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
@@ -50,7 +50,7 @@
     "zod-validation-error": "^3.4.0"
   },
   "dependencies": {
-    "@tailwindcss/cli": "4.0.0-beta.2",
+    "@tailwindcss/cli": "4.0.0-beta.9",
     "@zachleat/heading-anchors": "^1.0.1",
     "tailwindcss": "4.0.0-beta.2"
   }
