@@ -18,7 +18,7 @@
     <meta property="twitter:description" content="A random  blog focusing on web development.">
     <meta property="twitter:image" content="https://geomydas.github.io/randev/images/meta-tags.png">
     <!-- prettier-ignore-start -->
-		<style>/*! tailwindcss v4.0.0-beta.7 | MIT License | https://tailwindcss.com */
+		<style>/*! tailwindcss v4.0.0-beta.9 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 @layer theme {
   :root {
@@ -1212,9 +1212,6 @@
   .inline {
     display: inline;
   }
-  .inline-block {
-    display: inline-block;
-  }
   .inline-flex {
     display: inline-flex;
   }
@@ -1223,9 +1220,6 @@
   }
   .table {
     display: table;
-  }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
   }
   .h-fit {
     height: fit-content;
@@ -1340,18 +1334,6 @@
     border-style: var(--tw-border-style);
     border-width: 0px;
   }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
-  .border-4 {
-    border-style: var(--tw-border-style);
-    border-width: 4px;
-  }
-  .border-5 {
-    border-style: var(--tw-border-style);
-    border-width: 5px;
-  }
   .border-y {
     border-block-style: var(--tw-border-style);
     border-block-width: 1px;
@@ -1360,21 +1342,9 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 2px;
   }
-  .border-t-4 {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 4px;
-  }
-  .border-t-44 {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 44px;
-  }
   .border-dashed {
     --tw-border-style: dashed;
     border-style: dashed;
-  }
-  .border-dotted {
-    --tw-border-style: dotted;
-    border-style: dotted;
   }
   .border-gray-400 {
     border-color: var(--color-gray-400);
@@ -1390,9 +1360,6 @@
   }
   .bg-gray-300 {
     background-color: var(--color-gray-300);
-  }
-  .bg-gray-400 {
-    background-color: var(--color-gray-400);
   }
   .bg-green-400 {
     background-color: var(--color-green-400);
@@ -1789,6 +1756,34 @@
       }
     }
   }
+  .group-hover\/tags\:bg-red-400 {
+    &:is(:where(.group\/tags):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-red-400);
+      }
+    }
+  }
+  .group-hover\/tags\:bg-rainbow {
+    &:is(:where(.group\/tags):hover *) {
+      @media (hover: hover) {
+        background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
+      }
+    }
+  }
+  .group-hover\/tags\:bg-clip-text {
+    &:is(:where(.group\/tags):hover *) {
+      @media (hover: hover) {
+        background-clip: text;
+      }
+    }
+  }
+  .group-hover\/tags\:text-transparent {
+    &:is(:where(.group\/tags):hover *) {
+      @media (hover: hover) {
+        color: transparent;
+      }
+    }
+  }
   .group-has-focus\/card\:bg-gray-200 {
     &:is(:where(.group\/card):has(*:focus) *) {
       background-color: var(--color-gray-200);
@@ -1904,12 +1899,6 @@
       background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
     }
   }
-  .after\:bg-clip-text {
-    &::after {
-      content: var(--tw-content);
-      background-clip: text;
-    }
-  }
   .after\:transition {
     &::after {
       content: var(--tw-content);
@@ -1932,6 +1921,13 @@
       }
     }
   }
+  .hover\:bg-gray-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-300);
+      }
+    }
+  }
   .hover\:bg-gray-400 {
     &:hover {
       @media (hover: hover) {
@@ -1946,38 +1942,10 @@
       }
     }
   }
-  .hover\:bg-rainbowConic {
-    &:hover {
-      @media (hover: hover) {
-        background-image: conic-gradient( from var(--tw-rotate) in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400), var(--color-red-400) );
-      }
-    }
-  }
-  .hover\:bg-clip-text {
-    &:hover {
-      @media (hover: hover) {
-        background-clip: text;
-      }
-    }
-  }
-  .hover\:text-black {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-black);
-      }
-    }
-  }
   .hover\:text-transparent {
     &:hover {
       @media (hover: hover) {
         color: transparent;
-      }
-    }
-  }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
       }
     }
   }
@@ -2047,6 +2015,11 @@
       }
     }
   }
+  .dark\:bg-gray-600 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-gray-600);
+    }
+  }
   .dark\:bg-gray-700 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-gray-700);
@@ -2060,6 +2033,11 @@
   .dark\:bg-gray-900 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-gray-900);
+    }
+  }
+  .dark\:bg-gray-950 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-gray-950);
     }
   }
   .dark\:fill-gray-400 {
@@ -2120,6 +2098,24 @@
       @media (hover: hover) {
         @media (prefers-color-scheme: dark) {
           background-color: var(--color-gray-700);
+        }
+      }
+    }
+  }
+  .hover\:dark\:bg-gray-800 {
+    &:hover {
+      @media (hover: hover) {
+        @media (prefers-color-scheme: dark) {
+          background-color: var(--color-gray-800);
+        }
+      }
+    }
+  }
+  .hover\:dark\:bg-red-400 {
+    &:hover {
+      @media (hover: hover) {
+        @media (prefers-color-scheme: dark) {
+          background-color: var(--color-red-400);
         }
       }
     }
@@ -2617,7 +2613,7 @@
  </heading-anchors>
     </main>
 
-    <!-- This page `/about/` was built on 2024-12-16T09:42:45.002Z -->
+    <!-- This page `/about/` was built on 2025-01-21T10:47:10.931Z -->
     <!-- prettier-ignore-start -->
 		<script type="module" src="/randev/dist/rJ3_G-2ArF.js"></script>
 		<!-- prettier-ignore-end -->
