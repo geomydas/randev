@@ -1349,9 +1349,6 @@
   .border-gray-400 {
     border-color: var(--color-gray-400);
   }
-  .bg-blue-400 {
-    background-color: var(--color-blue-400);
-  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
@@ -1577,6 +1574,10 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
   .leading-normal {
     --tw-leading: var(--leading-normal);
     line-height: var(--leading-normal);
@@ -1759,34 +1760,6 @@
       }
     }
   }
-  .group-hover\/tags\:bg-red-400 {
-    &:is(:where(.group\/tags):hover *) {
-      @media (hover: hover) {
-        background-color: var(--color-red-400);
-      }
-    }
-  }
-  .group-hover\/tags\:bg-rainbow {
-    &:is(:where(.group\/tags):hover *) {
-      @media (hover: hover) {
-        background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
-      }
-    }
-  }
-  .group-hover\/tags\:bg-clip-text {
-    &:is(:where(.group\/tags):hover *) {
-      @media (hover: hover) {
-        background-clip: text;
-      }
-    }
-  }
-  .group-hover\/tags\:text-transparent {
-    &:is(:where(.group\/tags):hover *) {
-      @media (hover: hover) {
-        color: transparent;
-      }
-    }
-  }
   .group-has-focus\/card\:bg-gray-200 {
     &:is(:where(.group\/card):has(*:focus) *) {
       background-color: var(--color-gray-200);
@@ -1917,31 +1890,10 @@
       }
     }
   }
-  .hover\:bg-gray-200 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-200);
-      }
-    }
-  }
   .hover\:bg-gray-300 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-300);
-      }
-    }
-  }
-  .hover\:bg-gray-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-400);
-      }
-    }
-  }
-  .hover\:bg-transparent {
-    &:hover {
-      @media (hover: hover) {
-        background-color: transparent;
       }
     }
   }
@@ -2025,11 +1977,6 @@
       }
     }
   }
-  .dark\:bg-gray-600 {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-gray-600);
-    }
-  }
   .dark\:bg-gray-700 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-gray-700);
@@ -2043,11 +1990,6 @@
   .dark\:bg-gray-900 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-gray-900);
-    }
-  }
-  .dark\:bg-gray-950 {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-gray-950);
     }
   }
   .dark\:fill-gray-400 {
@@ -2117,15 +2059,6 @@
       @media (hover: hover) {
         @media (prefers-color-scheme: dark) {
           background-color: var(--color-gray-800);
-        }
-      }
-    }
-  }
-  .hover\:dark\:bg-red-400 {
-    &:hover {
-      @media (hover: hover) {
-        @media (prefers-color-scheme: dark) {
-          background-color: var(--color-red-400);
         }
       }
     }
@@ -2633,7 +2566,7 @@
         <a class="group-hover/card:bg-rainbow group-has-focus/card:bg-rainbow block bg-clip-text group-hover/card:text-transparent group-has-focus/card:text-transparent" href="/randev/blog/2-Setting-widths-and-heights/">Setting widths and heights</a>
       </h2>
       <p class="mb-4 text-sm">
-        <time datetime="2025-01-21">January 2025</time>
+        <time datetime="2025-01-23">January 2025</time>
       </p>
       <p class="mb-8 text-lg leading-relaxed">Should I use this or that or none? Width or max-width? Height or min-height?</p>
       <ul class="flex h-fit flex-wrap gap-4">
@@ -2652,7 +2585,7 @@
         <a class="group-hover/card:bg-rainbow group-has-focus/card:bg-rainbow block bg-clip-text group-hover/card:text-transparent group-has-focus/card:text-transparent" href="/randev/blog/1-Using-a-CSS-reset/">Using a CSS reset</a>
       </h2>
       <p class="mb-4 text-sm">
-        <time datetime="2025-01-21">January 2025</time>
+        <time datetime="2025-01-23">January 2025</time>
       </p>
       <p class="mb-8 text-lg leading-relaxed">What&#39;s a CSS reset? What does it do? What should I use?</p>
       <ul class="flex h-fit flex-wrap gap-4">
@@ -2669,15 +2602,18 @@
 </ol>
 
 
-  <a class="after:bg-rainbow hover:bg-rainbow relative bg-clip-text text-2xl font-bold text-blue-500 after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transition hover:text-transparent hover:after:scale-x-100 dark:text-blue-400" href="/randev/blog/">See all posts →</a>
+  <p>
+   <span class="sr-only">Alternatively,</span>
+    <a class="after:bg-rainbow hover:bg-rainbow relative bg-clip-text text-2xl font-bold text-blue-500 after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transition hover:text-transparent hover:after:scale-x-100 dark:text-blue-400" href="/randev/blog/">View all posts</a>
+  </p>
 </div>
 
  </heading-anchors>
     </main>
 
-    <!-- This page `/` was built on 2025-01-21T10:52:50.781Z -->
+    <!-- This page `/` was built on 2025-01-23T09:33:18.237Z -->
     <!-- prettier-ignore-start -->
-		<script type="module" src="/randev/dist/rJ3_G-2ArF.js"></script>
+		<script type="module" src="/randev/dist/PQuipxb2GV.js"></script>
 		<!-- prettier-ignore-end -->
   </body>
 </html>
