@@ -20,9 +20,12 @@ const numberOfLatestPostsToShow = 6;
   {% set postslistCounter = postsCount %}
   {% include "postslist.njk" %}
 
-  <a
-    class="after:bg-rainbow hover:bg-rainbow relative bg-clip-text text-2xl font-bold text-blue-500 after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transition hover:text-transparent hover:after:scale-x-100 dark:text-blue-400"
-    href="blog.njk"
-    >See all posts →</a
-  >
+  <p>
+   <span class="sr-only">Alternatively,</span>
+    <a
+      class="after:bg-rainbow hover:bg-rainbow relative bg-clip-text text-2xl font-bold text-blue-500 after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transition hover:text-transparent hover:after:scale-x-100 dark:text-blue-400"
+      href="blog.njk"
+      >View all posts</a
+    >
+  </p>
 </div>

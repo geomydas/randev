@@ -1329,9 +1329,6 @@
   .border-gray-400 {
     border-color: var(--color-gray-400);
   }
-  .bg-blue-400 {
-    background-color: var(--color-blue-400);
-  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
@@ -1557,6 +1554,10 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
   .leading-normal {
     --tw-leading: var(--leading-normal);
     line-height: var(--leading-normal);
@@ -1739,34 +1740,6 @@
       }
     }
   }
-  .group-hover\/tags\:bg-red-400 {
-    &:is(:where(.group\/tags):hover *) {
-      @media (hover: hover) {
-        background-color: var(--color-red-400);
-      }
-    }
-  }
-  .group-hover\/tags\:bg-rainbow {
-    &:is(:where(.group\/tags):hover *) {
-      @media (hover: hover) {
-        background-image: linear-gradient( to right in lch, var(--color-red-400), var(--color-orange-400), var(--color-yellow-400), var(--color-green-400), var(--color-blue-400), var(--color-sky-400), var(--color-indigo-400), var(--color-violet-400) );
-      }
-    }
-  }
-  .group-hover\/tags\:bg-clip-text {
-    &:is(:where(.group\/tags):hover *) {
-      @media (hover: hover) {
-        background-clip: text;
-      }
-    }
-  }
-  .group-hover\/tags\:text-transparent {
-    &:is(:where(.group\/tags):hover *) {
-      @media (hover: hover) {
-        color: transparent;
-      }
-    }
-  }
   .group-has-focus\/card\:bg-gray-200 {
     &:is(:where(.group\/card):has(*:focus) *) {
       background-color: var(--color-gray-200);
@@ -1897,31 +1870,10 @@
       }
     }
   }
-  .hover\:bg-gray-200 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-200);
-      }
-    }
-  }
   .hover\:bg-gray-300 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-300);
-      }
-    }
-  }
-  .hover\:bg-gray-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-400);
-      }
-    }
-  }
-  .hover\:bg-transparent {
-    &:hover {
-      @media (hover: hover) {
-        background-color: transparent;
       }
     }
   }
@@ -2005,11 +1957,6 @@
       }
     }
   }
-  .dark\:bg-gray-600 {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-gray-600);
-    }
-  }
   .dark\:bg-gray-700 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-gray-700);
@@ -2023,11 +1970,6 @@
   .dark\:bg-gray-900 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-gray-900);
-    }
-  }
-  .dark\:bg-gray-950 {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-gray-950);
     }
   }
   .dark\:fill-gray-400 {
@@ -2097,15 +2039,6 @@
       @media (hover: hover) {
         @media (prefers-color-scheme: dark) {
           background-color: var(--color-gray-800);
-        }
-      }
-    }
-  }
-  .hover\:dark\:bg-red-400 {
-    &:hover {
-      @media (hover: hover) {
-        @media (prefers-color-scheme: dark) {
-          background-color: var(--color-red-400);
         }
       }
     }
