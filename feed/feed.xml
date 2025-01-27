@@ -5,15 +5,44 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/randev/feed/feed.xml" rel="self" />
   <link href="https://example.com/randev/" />
-  <updated>2025-01-23T09:33:02Z</updated>
+  <updated>2025-01-27T07:52:38Z</updated>
   <id>https://example.com/randev/</id>
   <author>
     <name>Your Name</name>
   </author>
   <entry>
+    <title>365 Days, 365 Books</title>
+    <link href="https://example.com/randev/blog/3-1BookEveryday/" />
+    <updated>2025-01-27T07:52:38Z</updated>
+    <id>https://example.com/randev/blog/3-1BookEveryday/</id>
+    <content type="html">&lt;h2 id=&quot;guide&quot;&gt;Guide&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Read a book each day&lt;/li&gt;
+&lt;li&gt;If you miss a day, read 2 books tomorrow. If you miss again, read 3 books the next day.&lt;/li&gt;
+&lt;li&gt;Read a variety of books
+&lt;ul&gt;
+&lt;li&gt;Fiction&lt;/li&gt;
+&lt;li&gt;Non-fiction&lt;/li&gt;
+&lt;li&gt;Classics&lt;/li&gt;
+&lt;li&gt;Modern&lt;/li&gt;
+&lt;li&gt;Short&lt;/li&gt;
+&lt;li&gt;Long&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If you want to read a long book but you think you are unable to do it in a day, read it on other days while reading other books.&lt;/li&gt;
+&lt;li&gt;Get your books from a library, book store, website, &lt;a href=&quot;https://annas-archive.org/&quot;&gt;https://annas-archive.org/&lt;/a&gt;, or wherever you want.&lt;/li&gt;
+&lt;li&gt;Read from a laptop, phone, physical book, Kindle, or wherever you want.&lt;/li&gt;
+&lt;li&gt;Get your book suggestions wherever you want but I suggest &lt;a href=&quot;https://goodreads.com/list&quot;&gt;https://goodreads.com/list&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Write about the book you finished reading. Summarize it, explain the chapters, highlight quotes, and etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;what-i-ve-done&quot;&gt;What I&#39;ve done&lt;/h2&gt;
+&lt;p&gt;I write about the notes from the book on this website and publish it as a blog. I go on &lt;a href=&quot;https://goodreads.com/list&quot;&gt;https://goodreads.com/list&lt;/a&gt; for reccomendations then get the book on &lt;a href=&quot;https://annas-archive.org/&quot;&gt;https://annas-archive.org/&lt;/a&gt;. After I get the eBook, I connect my &lt;em&gt;Kindle Paperwhite 11th gen&lt;/em&gt; to my computer and upload it. Sometimes I go the library for books that I cannot find online.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>Setting widths and heights</title>
     <link href="https://example.com/randev/blog/2-Setting-widths-and-heights/" />
-    <updated>2025-01-23T09:33:02Z</updated>
+    <updated>2025-01-27T07:52:38Z</updated>
     <id>https://example.com/randev/blog/2-Setting-widths-and-heights/</id>
     <content type="html">&lt;h2 id=&quot;1-width&quot;&gt;1. &lt;code&gt;width:&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;You would often use this with &lt;code&gt;max-width:&lt;/code&gt; most of the time. Setting fixed widths such as &lt;code&gt;width: 320px&lt;/code&gt; or &lt;code&gt;width: 2rem&lt;/code&gt; is rarely done and not even reccomended as you would likely use &lt;code&gt;max-width:&lt;/code&gt; for it. Use fixed widths for smaller stuff like icons and avatars which rarely cause overflow.&lt;/p&gt;
@@ -27,7 +56,7 @@
   <entry>
     <title>Using a CSS reset</title>
     <link href="https://example.com/randev/blog/1-Using-a-CSS-reset/" />
-    <updated>2025-01-23T09:33:02Z</updated>
+    <updated>2025-01-27T07:52:38Z</updated>
     <id>https://example.com/randev/blog/1-Using-a-CSS-reset/</id>
     <content type="html">&lt;h2 id=&quot;whats-a-reset&quot;&gt;What&#39;s a reset?&lt;/h2&gt;
 &lt;p&gt;A CSS reset is a set of rules that you can add in your code that usually provides better defaults. You don&#39;t need to install or add dependencies, it is as simple as copy &amp;amp; pasting it in your code. In a way, it provides a blank canvas to start your project on. &lt;a href=&quot;https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1&quot;&gt;This reset from Josh Comeau&lt;/a&gt; is an example. &lt;a href=&quot;https://piccalil.li/blog/a-more-modern-css-reset/&quot;&gt;This reset from Andy Bell is an another example&lt;/a&gt;&lt;/p&gt;
