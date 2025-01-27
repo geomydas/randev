@@ -4,11 +4,14 @@
 >
   {%- for post in postslist | reverse %}
     <li
-      class="group/card after:animate-bgRotate after:bg-rainbowConic relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md [--border-size:1rem] after:absolute after:inset-0 after:-z-10 after:hidden after:size-[calc(100%+var(--border-size))] after:-translate-[calc(var(--border-size)/2)] after:rounded-xl hover:bg-gray-50 hover:after:block has-focus:bg-gray-50 has-focus:after:block dark:bg-gray-900 hover:dark:bg-gray-700 has-focus:dark:bg-gray-700"
+      class="group/card relative row-span-4 grid grid-rows-subgrid gap-0 rounded-md bg-gray-200 p-6 shadow-md hover:bg-gray-50 has-focus:bg-gray-50 has-focus:after:block dark:bg-gray-900 hover:dark:bg-gray-700 has-focus:dark:bg-gray-700"
     >
-      <h2 class="mb-6 text-4xl font-black">
+      <div
+        class="animate-bgRotate bg-rainbowConic absolute inset-0 -z-10 hidden size-[calc(100%+var(--border-size))] -translate-[calc(var(--border-size)/2)] rounded-xl [--border-size:calc(var(--spacing)*4)] group-hover/card:block group-focus/card:block"
+      ></div>
+      <h2 class="mb-6">
         <a
-          class="group-hover/card:bg-rainbow group-has-focus/card:bg-rainbow block bg-clip-text group-hover/card:text-transparent group-has-focus/card:text-transparent"
+          class="hover:bg-rainbow block text-4xl font-black hover:bg-clip-text hover:text-transparent"
           href="{{ post.url }}"
           >{{ post.data.title }}</a
         >
